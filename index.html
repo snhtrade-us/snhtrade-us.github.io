@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S&H Global Trade Corp | Business Master Plan</title>
+    <title>S&H Global Trade Corp | Master Plan</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #c5a059; --dark: #0a0a0a; --white: #ffffff; }
@@ -11,21 +11,23 @@
         body { font-family: 'Montserrat', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; scroll-snap-type: y mandatory; }
         
         section { width: 100%; height: 100vh; position: relative; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .bg-media { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; filter: brightness(0.3); object-fit: cover; }
-        .container { position: relative; z-index: 10; width: 85%; max-width: 1400px; }
+        .bg-media { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; filter: brightness(0.25); object-fit: cover; }
+        .container { position: relative; z-index: 10; width: 85%; max-width: 1400px; padding: 40px; }
         
-        /* Typography */
-        header { position: fixed; top: 40px; left: 5%; z-index: 1000; font-size: 1.8rem; font-weight: 900; letter-spacing: 2px; }
+        /* Navigation & Logo */
+        header { position: fixed; top: 40px; left: 5%; z-index: 1000; font-size: 2rem; font-weight: 900; letter-spacing: 2px; }
         header span { color: var(--gold); }
-        .slide-title { font-size: 4.5rem; font-weight: 900; margin-bottom: 30px; line-height: 1; text-transform: uppercase; }
-        .slide-title span { color: var(--gold); display: block; font-size: 1.2rem; letter-spacing: 5px; margin-bottom: 15px; }
 
-        /* Content Grid */
-        .master-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px; }
-        .card { background: rgba(255,255,255,0.05); padding: 30px; border-left: 3px solid var(--gold); backdrop-filter: blur(10px); }
-        .card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
-        .card p, .card li { font-size: 0.9rem; line-height: 1.7; opacity: 0.8; margin-bottom: 8px; list-style: none; }
-        .card strong { color: var(--white); }
+        /* Slide Titles */
+        .slide-title { font-size: 4rem; font-weight: 900; margin-bottom: 25px; line-height: 1.1; text-transform: uppercase; }
+        .slide-title span { color: var(--gold); display: block; font-size: 1.1rem; letter-spacing: 6px; margin-bottom: 10px; }
+
+        /* Detail Boxes (Full Content) */
+        .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .detail-box { background: rgba(255, 255, 255, 0.05); border-left: 3px solid var(--gold); padding: 25px; backdrop-filter: blur(10px); }
+        .detail-box h3 { color: var(--gold); font-size: 1.2rem; margin-bottom: 15px; text-transform: uppercase; }
+        .detail-box p, .detail-box li { font-size: 0.95rem; line-height: 1.7; opacity: 0.9; margin-bottom: 8px; list-style: none; }
+        .detail-box strong { color: var(--white); border-bottom: 1px dotted var(--gold); }
     </style>
 </head>
 <body>
@@ -33,25 +35,21 @@
     <header>S&H <span>GLOBAL</span></header>
 
     <section>
-        <video class="bg-media" autoplay muted loop poster="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1920&q=80">
+        <video class="bg-media" autoplay muted loop>
             <source src="https://assets.mixkit.co/videos/preview/mixkit-world-map-dots-and-lines-connectivity-background-video-12165-large.mp4" type="video/mp4">
         </video>
         <div class="container">
-            <h2 class="slide-title"><span>01. ABOUT US</span>Company Overview</h2>
-            <div class="master-grid">
-                <div class="card">
-                    <h3>General Info</h3>
-                    <p><strong>Name:</strong> S&H Global Trading Corp.</p>
-                    <p><strong>CEO:</strong> Ju Hee Han (Jeffrey Han)</p>
-                    <p><strong>Est:</strong> 2014</p>
+            <h2 class="slide-title"><span>01. ABOUT US</span>Company <br>Overview</h2>
+            <div class="detail-grid">
+                <div class="detail-box">
+                    <h3>Profile</h3>
+                    <p><strong>CEO:</strong> Ju Hee Han (Jeffrey Han) [cite: 1]</p>
+                    <p><strong>Established:</strong> 2014 [cite: 2]</p>
+                    <p><strong>Address:</strong> 13740 N Highway 183 STE K1, Austin, TX 78750 [cite: 31]</p>
                 </div>
-                <div class="card">
-                    <h3>Location</h3>
-                    <p>13740 N Highway 183 STE K1, AUSTIN, TX 78750</p>
-                </div>
-                <div class="card">
-                    <h3>Core Role</h3>
-                    <p>Professional import & distribution partner. We prioritize buyer profit, ensure quality assurance, and take full responsibility for claim resolution.</p>
+                <div class="detail-box">
+                    <h3>Strategic Role</h3>
+                    <p>Specialized import/distribution partner. We prioritize buyer profit and take full responsibility for quality assurance and claim resolution. [cite: 1]</p>
                 </div>
             </div>
         </div>
@@ -60,19 +58,19 @@
     <section>
         <div class="bg-media" style="background: url('https://images.unsplash.com/photo-1454165833772-d996d4951ee2?auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
         <div class="container">
-            <h2 class="slide-title"><span>02. VISION & VALUES</span>Strategic Compass</h2>
-            <div class="master-grid">
-                <div class="card">
+            <h2 class="slide-title"><span>02. STRATEGY</span>Vision & <br>Core Values</h2>
+            <div class="detail-grid">
+                <div class="detail-box">
                     <h3>Vision</h3>
-                    <p>Specialized import/distribution company tailored to current US consumer trends.</p>
+                    <p>A specialized trade company tailored to the latest US consumer trends and market demands. [cite: 10, 15]</p>
                 </div>
-                <div class="card">
+                <div class="detail-box">
                     <h3>Future Strategy</h3>
-                    <p>Establishing and consolidating trade lines with US distribution networks for newly introduced products.</p>
+                    <p>Establishing and consolidating trade lines within the US distribution network for newly introduced products. [cite: 19]</p>
                 </div>
-                <div class="card">
+                <div class="detail-box">
                     <h3>Core Values</h3>
-                    <p>Franchising the supply of high-quality products to ensure market dominance.</p>
+                    <p>Franchising the supply of high-quality products to ensure stability and market dominance. [cite: 14]</p>
                 </div>
             </div>
         </div>
@@ -81,19 +79,19 @@
     <section>
         <div class="bg-media" style="background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
         <div class="container">
-            <h2 class="slide-title"><span>03. PORTFOLIO</span>Product Strategy</h2>
-            <div class="master-grid">
-                <div class="card">
-                    <h3>Eco-Friendly Food</h3>
-                    <p>(a) Natural ingredients, Meal-kits, Price competitiveness<br>(b) Trend-focused products<br>(c) Logistics & profit preservation</p>
+            <h2 class="slide-title"><span>03. OPERATIONS</span>Product <br>Strategy</h2>
+            <div class="detail-grid">
+                <div class="detail-box">
+                    <h3>Eco & Lifestyle</h3>
+                    <p><strong>(a)</strong> Natural ingredients & meal-kits<br><strong>(b)</strong> Trend-driven high-efficiency goods<br><strong>(c)</strong> Direct sourcing for cost reduction </p>
                 </div>
-                <div class="card">
-                    <h3>Lifestyle Goods</h3>
-                    <p>(a) High-efficiency household items<br>(b) Trendy designs<br>(c) Cost reduction via direct sourcing</p>
+                <div class="detail-box">
+                    <h3>IT & Beauty</h3>
+                    <p><strong>(a)</strong> Global functional beauty lines<br><strong>(b)</strong> Innovative IT peripherals<br><strong>(c)</strong> Guaranteed authenticity & performance [cite: 14, 25]</p>
                 </div>
-                <div class="card">
-                    <h3>Beauty & IT Accessories</h3>
-                    <p>(a) Functional & global beauty lines<br>(b) Innovation-driven IT peripherals<br>(c) Guaranteed authenticity & certification</p>
+                <div class="detail-box">
+                    <h3>Sports & Leisure</h3>
+                    <p>High-durability lifestyle gear and gadgets with strategic inventory management. [cite: 13]</p>
                 </div>
             </div>
         </div>
@@ -104,19 +102,19 @@
             <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-security-lock-on-a-circuit-board-1730-large.mp4" type="video/mp4">
         </video>
         <div class="container">
-            <h2 class="slide-title"><span>04. SECURITY</span>Stabilization</h2>
-            <div class="master-grid">
-                <div class="card">
-                    <h3>Strict Confidentiality</h3>
-                    <p>We strictly adhere to Non-Disclosure Agreements (NDA). All transaction details and partner information are kept 100% private.</p>
+            <h2 class="slide-title"><span>04. SECURITY</span>Transaction <br>Stabilization</h2>
+            <div class="detail-grid">
+                <div class="detail-box">
+                    <h3>Non-Disclosure (NDA)</h3>
+                    <p>Strict confidentiality principles. Transaction details are 100% secured and never exposed to the outside. </p>
                 </div>
-                <div class="card">
-                    <h3>Predictable Results</h3>
-                    <p>Stable operations through secure contracts and data-driven sales forecasting.</p>
+                <div class="detail-box">
+                    <h3>Predictability</h3>
+                    <p>Securing predictable results and data-driven sales volume through stable contracts. [cite: 17]</p>
                 </div>
-                <div class="card">
-                    <h3>Partner Management</h3>
-                    <p>Customized management for Wholesalers, Retail Distribution, and Major Retail Vendors.</p>
+                <div class="detail-box">
+                    <h3>Partner Tiers</h3>
+                    <p>Wholesale, Retail Distribution, and Major Retail Vendor management. [cite: 16]</p>
                 </div>
             </div>
         </div>
