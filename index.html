@@ -3,84 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S&H Global Trade Corp | Professional Master Plan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>S&H Global Trade Corp | Official Master Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #c5a059; --dark: #0a0a0a; --white: #ffffff; --glass: rgba(255, 255, 255, 0.08); }
+        :root { --gold: #c5a059; --dark: #0a0a0a; --white: #ffffff; --gray: #1a1a1a; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; scroll-snap-type: y mandatory; }
+        body { font-family: 'Roboto', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; scroll-snap-type: y mandatory; }
         
         section { width: 100%; height: 100vh; position: relative; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .bg-media { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; filter: brightness(0.25); object-fit: cover; }
-        .container { position: relative; z-index: 10; width: 85%; max-width: 1400px; padding: 20px; }
+        .bg-media { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; filter: brightness(0.2); object-fit: cover; }
+        .container { position: relative; z-index: 10; width: 85%; max-width: 1400px; }
         
-        /* Fixed Branding */
-        header { position: fixed; top: 30px; left: 5%; z-index: 1000; font-size: 1.8rem; font-weight: 900; letter-spacing: 2px; }
-        header span { color: var(--gold); }
+        /* LOGO HEADER */
+        header { position: fixed; top: 30px; left: 5%; z-index: 1000; display: flex; align-items: center; }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 900; letter-spacing: 2px; border: 2px solid var(--gold); padding: 5px 15px; }
+        .logo span { color: var(--gold); }
 
-        /* Typography & Content */
-        .slide-tag { color: var(--gold); font-size: 1rem; letter-spacing: 5px; margin-bottom: 15px; display: block; font-weight: 700; }
-        .main-title { font-size: 3.8rem; font-weight: 900; line-height: 1.1; margin-bottom: 35px; text-transform: uppercase; }
+        /* TYPOGRAPHY */
+        h1, h2 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        .slide-tag { color: var(--gold); font-size: 0.9rem; letter-spacing: 5px; margin-bottom: 10px; display: block; font-weight: 700; }
+        .title { font-size: 3.5rem; line-height: 1.1; margin-bottom: 30px; }
         
-        .master-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
-        .detail-card { background: var(--glass); border-left: 4px solid var(--gold); padding: 35px; backdrop-filter: blur(15px); transition: 0.3s; }
-        .detail-card:hover { background: rgba(255, 255, 255, 0.12); }
-        .detail-card h3 { color: var(--gold); font-size: 1.3rem; margin-bottom: 20px; text-transform: uppercase; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 10px; }
-        
-        .content-list { list-style: none; }
-        .content-list li { font-size: 0.95rem; line-height: 1.8; margin-bottom: 12px; opacity: 0.9; position: relative; padding-left: 20px; }
-        .content-list li::before { content: '▶'; position: absolute; left: 0; color: var(--gold); font-size: 0.7rem; top: 5px; }
-        .content-list li strong { color: var(--gold); font-weight: 700; }
+        /* CONTENT BOXES */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .glass-card { background: rgba(255, 255, 255, 0.05); border-left: 4px solid var(--gold); padding: 30px; backdrop-filter: blur(10px); }
+        .glass-card h3 { color: var(--gold); font-size: 1.2rem; margin-bottom: 15px; text-transform: uppercase; }
+        .glass-card p, .glass-card li { font-size: 0.95rem; line-height: 1.7; opacity: 0.85; list-style: none; margin-bottom: 8px; }
+        .glass-card strong { color: var(--white); }
+
+        /* SCROLL INDICATOR */
+        .scroll-down { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); font-size: 0.8rem; letter-spacing: 3px; opacity: 0.5; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);} 40% {transform: translateY(-10px) translateX(-50%);} 60% {transform: translateY(-5px) translateX(-50%);} }
     </style>
 </head>
 <body>
 
-    <header>S&H <span>GLOBAL</span></header>
+    <header>
+        <div class="logo">S&H <span>GLOBAL TRADE CORP</span></div>
+    </header>
 
     <section>
         <video class="bg-media" autoplay muted loop>
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-world-map-dots-and-lines-connectivity-background-video-12165-large.mp4" type="video/mp4">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-global-enterprise-network-connection-background-30545-large.mp4" type="video/mp4">
         </video>
         <div class="container">
-            <span class="slide-tag">01. CORPORATE IDENTITY</span>
-            <h2 class="main-title">Global Trade <br>Master Plan</h2>
-            <div class="master-grid">
-                <div class="detail-card">
-                    <h3>Company Profile</h3>
-                    <ul class="content-list">
-                        <li><strong>Entity:</strong> S&H Global Trading Corp.</li>
-                        <li><strong>Leadership:</strong> CEO Ju Hee Han (Jeffrey Han)</li>
-                        <li><strong>Founded:</strong> Since 2014 (Established Excellence)</li>
-                        <li><strong>Headquarters:</strong> 13740 N Highway 183 STE K1, Austin, TX 78750</li>
-                    </ul>
-                </div>
-                <div class="detail-card">
-                    <h3>Strategic Mandate</h3>
-                    <ul class="content-list">
-                        <li>As a premier import & distribution partner, we ensure **maximum profit for buyers**.</li>
-                        <li>Comprehensive **Quality Assurance** and dedicated **Claim Resolution Management**.</li>
-                    </ul>
+            <span class="slide-tag">SECTION 01</span>
+            <h1 class="title">Strategic Market <br>Positioning</h1>
+            <div class="grid">
+                <div class="glass-card">
+                    <h3>Company Overview</h3>
+                    <p><strong>CEO:</strong> JU HEE HAN (Jeffrey Han)</p>
+                    <p><strong>Entity:</strong> S&H Global Trade Corp / B.O.S VANDER</p>
+                    <p>Leveraging expertise in international trade to connect diverse suppliers with domestic markets.</p>
                 </div>
             </div>
         </div>
+        <div class="scroll-down">SCROLL DOWN</div>
     </section>
 
     <section>
-        <div class="bg-media" style="background: url('https://images.unsplash.com/photo-1454165833772-d996d4951ee2?auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
+        <div class="bg-media" style="background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
         <div class="container">
-            <span class="slide-tag">02. VISION & STRATEGY</span>
-            <h2 class="main-title">The Future of <br>Distribution</h2>
-            <div class="master-grid">
-                <div class="detail-card">
-                    <h3>Vision</h3>
-                    <p style="line-height: 1.8; opacity: 0.9;">A specialized distribution powerhouse designed for the **evolving US consumer market**, focusing on trend-responsive import strategies.</p>
+            <span class="slide-tag">SECTION 02</span>
+            <h1 class="title">Established <br>Growth</h1>
+            <div class="grid">
+                <div class="glass-card">
+                    <h3>2014 - 2017</h3>
+                    <p>Established entry into the trade industry (2014). Sourced emerging consumer trends (2017).</p>
                 </div>
-                <div class="detail-card">
-                    <h3>Market Dominance</h3>
-                    <ul class="content-list">
-                        <li>Solidifying trade lines within the **US National Distribution Network**.</li>
-                        <li>Franchising the supply of high-quality products to secure **market leadership**.</li>
-                    </ul>
+                <div class="glass-card">
+                    <h3>2018 - 2020</h3>
+                    <p>Diversified into business consulting (2018). Established prompt client response systems (2020).</p>
+                </div>
+                <div class="glass-card">
+                    <h3>2023+</h3>
+                    <p>Expansion into overseas markets and increasing global operational reach.</p>
                 </div>
             </div>
         </div>
@@ -89,31 +86,20 @@
     <section>
         <div class="bg-media" style="background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
         <div class="container">
-            <span class="slide-tag">03. OPERATION CATEGORIES</span>
-            <h2 class="main-title">Detailed <br>Product Strategy</h2>
-            <div class="master-grid">
-                <div class="detail-card">
-                    <h3>Eco-Friendly & Food</h3>
-                    <ul class="content-list">
-                        <li><strong>(a)</strong> Natural ingredients, meal-kits, and pricing edge.</li>
-                        <li><strong>(b)</strong> Rapid adaptation to consumer trends.</li>
-                        <li><strong>(c)</strong> Optimal logistics to preserve profit margins.</li>
-                    </ul>
+            <span class="slide-tag">SECTION 03</span>
+            <h1 class="title">Diverse <br>Portfolio</h1>
+            <div class="grid">
+                <div class="glass-card">
+                    <h3>Healthcare & Eco-Food</h3>
+                    <p>Importing natural ingredients and meal-kits with extreme price competitiveness.</p>
                 </div>
-                <div class="detail-card">
-                    <h3>Beauty & Lifestyle</h3>
-                    <ul class="content-list">
-                        <li><strong>(a)</strong> Functional beauty & global skincare lines.</li>
-                        <li><strong>(b)</strong> Efficient household goods with trendy designs.</li>
-                        <li><strong>(c)</strong> Direct sourcing to eliminate middleman costs.</li>
-                    </ul>
+                <div class="glass-card">
+                    <h3>IT & Office Supplies</h3>
+                    <p>Providing high-efficiency office equipment and innovative premium peripherals.</p>
                 </div>
-                <div class="detail-card">
-                    <h3>IT & Security</h3>
-                    <ul class="content-list">
-                        <li><strong>(a)</strong> Innovative IT peripherals and office solutions.</li>
-                        <li><strong>(b)</strong> Safety-certified home and personal security gadgets.</li>
-                    </ul>
+                <div class="glass-card">
+                    <h3>Beauty & Security</h3>
+                    <p>Functional beauty products and durable lifestyle/personal security gadgets.</p>
                 </div>
             </div>
         </div>
@@ -124,22 +110,18 @@
             <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-security-lock-on-a-circuit-board-1730-large.mp4" type="video/mp4">
         </video>
         <div class="container">
-            <span class="slide-tag">04. TRANSACTION STABILIZATION</span>
-            <h2 class="main-title">Uncompromising <br>Security (NDA)</h2>
-            <div class="master-grid">
-                <div class="detail-card">
-                    <h3>Strict Confidentiality</h3>
-                    <ul class="content-list">
-                        <li>Operating under rigid **Non-Disclosure Agreements**.</li>
-                        <li>Zero exposure of transaction details or partner information to the public.</li>
-                    </ul>
+            <span class="slide-tag">SECTION 04</span>
+            <h1 class="title">Privacy & <br>Contact</h1>
+            <div class="grid">
+                <div class="glass-card">
+                    <h3>NDA Compliance</h3>
+                    <p>S&H Global Trade Corp. **does not operate an official website** due to strict non-disclosure agreements with our client companies.</p>
                 </div>
-                <div class="detail-card">
-                    <h3>Operational Stability</h3>
-                    <ul class="content-list">
-                        <li>Data-driven sales forecasting for predictable results.</li>
-                        <li>Customized contractual frameworks for wholesale and retail partners.</li>
-                    </ul>
+                <div class="glass-card">
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong> 13740 N Highway 183 STE K1, Austin, TX 78750</p>
+                    <p><strong>E-mail:</strong> consulod@gmail.com</p>
+                    <p><strong>Phone:</strong> 202-679-0800 / 571-409-7878</p>
                 </div>
             </div>
         </div>
