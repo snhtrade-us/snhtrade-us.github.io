@@ -3,148 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S&H Global Trade Corp | Workspace</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Noto+Sans+KR:wght@300;700&display=swap" rel="stylesheet">
+    <title>S&H Global Trade Corp | Master Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        /* [디자인 시스템 - 전문성을 결정짓는 코드] */
-        :root {
-            --gold: #d4af37; --navy: #001529; --white: #ffffff;
-        }
+        :root { --gold: #c5a059; --navy: #001220; --white: #ffffff; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html { 
-            font-family: 'Noto Sans KR', sans-serif; 
-            scroll-snap-type: y mandatory; /* 마우스 휠 한 번에 한 슬라이드씩 이동 */
-            overflow-x: hidden; background: #000;
-        }
-
-        /* 슬라이드 레이아웃 */
-        section {
-            width: 100%; height: 100vh;
-            display: flex; align-items: center; justify-content: center;
-            position: relative; scroll-snap-align: start;
-        }
-
-        /* 배경 이미지 설정 (필터링으로 고급스러움 강조) */
-        .bg-img {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 1; filter: brightness(0.3) grayscale(20%);
-            background-size: cover; background-position: center;
-        }
-
-        /* 로고: 좌측 상단 고정 */
-        .fixed-logo {
-            position: fixed; top: 40px; left: 60px; z-index: 100;
-            font-family: 'Montserrat'; font-weight: 900; font-size: 2rem; color: var(--white);
-        }
-        .fixed-logo span { color: var(--gold); }
-
-        /* 컨텐츠 박스 */
-        .content {
-            position: relative; z-index: 10; width: 80%; max-width: 1200px;
-            color: var(--white);
-        }
-
-        .category-label { font-family: 'Montserrat'; font-size: 1.2rem; color: var(--gold); letter-spacing: 5px; margin-bottom: 20px; display: block; }
-        .main-h1 { font-family: 'Montserrat'; font-size: 5.5rem; line-height: 1; margin-bottom: 40px; text-transform: uppercase; }
+        body { font-family: 'Noto Sans KR', sans-serif; background: #000; color: #fff; overflow-x: hidden; scroll-snap-type: y mandatory; }
         
-        /* 텍스트 (a), (b), (c)를 세련되게 배치하는 그리드 */
-        .strategy-container {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
-        }
-        .strategy-card {
-            background: rgba(255, 255, 255, 0.05); border-left: 2px solid var(--gold);
-            padding: 30px; backdrop-filter: blur(10px);
-            transition: 0.5s;
-        }
-        .strategy-card:hover { background: rgba(212, 175, 55, 0.1); transform: translateY(-10px); }
-        .strategy-card h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 15px; }
-        .strategy-card p { font-size: 1rem; line-height: 1.8; opacity: 0.8; }
+        section { width: 100%; height: 100vh; position: relative; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        
+        /* 배경 동영상 및 이미지 설정 */
+        .bg-media { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; filter: brightness(0.35); object-fit: cover; }
+        
+        .container { position: relative; z-index: 10; width: 85%; max-width: 1400px; }
+        .slide-num { font-family: 'Montserrat'; color: var(--gold); font-size: 1.5rem; letter-spacing: 5px; }
+        .title { font-family: 'Montserrat'; font-size: 4.5rem; font-weight: 900; margin: 20px 0; line-height: 1.1; }
+        
+        /* 텍스트 내용 상세 배치 (주인님 텍스트 100% 반영) */
+        .grid-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .info-card { background: rgba(255,255,255,0.08); padding: 30px; border-top: 2px solid var(--gold); backdrop-filter: blur(10px); }
+        .info-card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.3rem; }
+        .info-card p { font-size: 1rem; line-height: 1.7; opacity: 0.9; }
+        .info-card ul { list-style: none; padding: 0; }
+        .info-card li { margin-bottom: 8px; font-size: 0.95rem; position: relative; padding-left: 15px; }
+        .info-card li::before { content: '•'; position: absolute; left: 0; color: var(--gold); }
 
-        /* 보안 문구 전용 스타일 */
-        .security-box { border: 1px solid var(--gold); padding: 60px; text-align: center; background: rgba(0,0,0,0.6); }
-
+        header { position: fixed; top: 40px; left: 5%; z-index: 1000; font-family: 'Montserrat'; font-weight: 900; font-size: 1.8rem; }
+        header span { color: var(--gold); }
     </style>
 </head>
 <body>
 
-    <div class="fixed-logo">S&H <span>GLOBAL</span></div>
+    <header>S&H <span>GLOBAL</span></header>
 
     <section>
-        <div class="bg-img" style="background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80');"></div>
-        <div class="content" style="text-align: center;">
-            <span class="category-label">ESTABLISHED 2014</span>
-            <h1 class="main-h1">GLOBAL TRADE <br>SOLUTION</h1>
-            <p style="font-size: 1.2rem; letter-spacing: 2px;">S&H Global Trade Corp. Analysis Workspace</p>
-        </div>
-    </section>
-
-    <section>
-        <div class="bg-img" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1920&q=80');"></div>
-        <div class="content">
-            <span class="category-label">01. ECO-FRIENDLY FOOD</span>
-            <h1 class="main-h1">PREMIUM <br>GOURMET</h1>
-            <div class="strategy-container">
-                <div class="strategy-card">
-                    <h3>(a) 성격 및 가격</h3>
-                    <p>천연 원료 기반 식자재를 산지 직접 소싱하여 글로벌 최고 수준의 가격 경쟁력을 확보합니다.</p>
+        <video class="bg-media" autoplay muted loop><source src="https://assets.mixkit.co/videos/preview/mixkit-world-map-dots-and-lines-connectivity-background-video-12165-large.mp4" type="video/mp4"></video>
+        <div class="container">
+            <span class="slide-num">01. ABOUT US</span>
+            <h1 class="title">S&H Global <br>Trading Corp.</h1>
+            <div class="grid-box">
+                <div class="info-card">
+                    <h3>Company Profile</h3>
+                    <ul>
+                        <li><strong>대표이사:</strong> 한주희 (Jeffrey Han)</li>
+                        <li><strong>설립일:</strong> 2014년</li>
+                        <li><strong>주소:</strong> 13740 N Highway 183 STE K1, AUSTIN, TX 78750</li>
+                    </ul>
                 </div>
-                <div class="strategy-card">
-                    <h3>(b) 중점사항</h3>
-                    <p>트렌디한 밀키트 및 건강 지향적 식자재 라인업을 상시 발굴하여 시장 점유율을 확대합니다.</p>
-                </div>
-                <div class="strategy-card">
-                    <h3>(c) 물류 및 이익</h3>
-                    <p>정밀한 콜드체인 시스템으로 신선도를 유지하고, 최적화된 유통 구조로 마진율을 보호합니다.</p>
+                <div class="info-card">
+                    <h3>Key Role</h3>
+                    <p>수입 유통 전문 파트너로서 구매사의 이익을 최우선으로 하며 품질 보증 및 클레임 해결을 책임짐</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="bg-img" style="background-image: url('https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=1920&q=80');"></div>
-        <div class="content">
-            <span class="category-label">02. DAILY GOODS</span>
-            <h1 class="main-h1">LIFESTYLE <br>ESSENTIALS</h1>
-            <div class="strategy-container">
-                <div class="strategy-card">
-                    <h3>(a) 성격 및 가격</h3>
-                    <p>실용성을 극대화한 잡화류를 제조사 직거래를 통해 유통 마진을 최소화한 합리적 가격에 공급합니다.</p>
+        <div class="bg-media" style="background: url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
+        <div class="container">
+            <span class="slide-num">02. VISION & VALUES</span>
+            <h1 class="title">Strategic <br>Values</h1>
+            <div class="grid-box">
+                <div class="info-card">
+                    <h3>Vision</h3>
+                    <p>미국 소비자의 현재 트렌드에 맞춘 소비성 제품 수입 유통 전문 회사</p>
                 </div>
-                <div class="strategy-card">
-                    <h3>(b) 중점사항</h3>
-                    <p>현대인의 라이프스타일에 맞춘 감각적인 디자인과 높은 내구성을 가진 제품을 엄선합니다.</p>
+                <div class="info-card">
+                    <h3>Future Strategy</h3>
+                    <p>새롭게 접근하는 수입 제품의 미국 내 유통 라인과의 거래 라인 구축 및 공고화</p>
                 </div>
-                <div class="strategy-card">
-                    <h3>(c) 물류 및 이익</h3>
-                    <p>대량 물류 거점 확보를 통해 운송비를 절감하고 파트너사에게 최상의 수익을 제공합니다.</p>
+                <div class="info-card">
+                    <h3>Core Value</h3>
+                    <p>우수한 품질의 제품에 대한 공급 프랜차이즈화</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="bg-img" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');"></div>
-        <div class="content">
-            <div class="security-box">
-                <h1 class="main-h1" style="font-size: 3.5rem; color: var(--gold); margin-bottom: 20px;">STRICTLY CONFIDENTIAL</h1>
-                <p style="font-size: 1.3rem; line-height: 2; font-weight: 300;">
-                    S&H Global Trade Corp.는 고객사와의 **비공개 협약(NDA)**을 철저히 준수합니다. <br>
-                    이에 따라 당사는 대외적인 홈페이지 운영을 지양하며, <br>
-                    파트너사의 비즈니스 보안과 이익 보호를 최우선 가치로 삼습니다.
-                </p>
+        <div class="bg-media" style="background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
+        <div class="container">
+            <span class="slide-num">03. PRODUCT STRATEGY</span>
+            <h2 class="title" style="font-size: 3rem;">Operations Strategy</h2>
+            <div class="grid-box" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="info-card">
+                    <h3>친환경 식품</h3>
+                    <p>(a) 자연 식재료, 간편식, 가격 경쟁력<br>(b) 밀키트, 트렌드 제품 중점<br>(c) 물류 조건 확보 및 이익 보존</p>
+                </div>
+                <div class="info-card">
+                    <h3>가정 잡화/생활용품</h3>
+                    <p>(a) 고효율 생활 잡화<br>(b) 트렌디 디자인<br>(c) 직소싱 통한 원가 절감</p>
+                </div>
+                <div class="info-card">
+                    <h3>뷰티/IT/레포츠</h3>
+                    <p>글로벌 기능성 제품부터 혁신 IT 소모품, 레포츠 기어까지 내구성 및 인증 준수</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="bg-img" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');"></div>
-        <div class="content">
-            <h1 class="main-h1" style="font-size: 4rem;">CONTACT US</h1>
-            <div style="font-size: 1.5rem; line-height: 2.5; border-top: 2px solid var(--gold); padding-top: 30px;">
-                <p><strong>CEO :</strong> JU HEE HAN (한주희)</p>
-                <p><strong>ADDR :</strong> 13740 N Highway 183 STE K1, AUSTIN, TX 78750</p>
-                <p><strong>MAIL :</strong> consulod@gmail.com</p>
-                <p><strong>TEL :</strong> 202-679-0800 / 571-409-7878</p>
+        <video class="bg-media" autoplay muted loop><source src="https://assets.mixkit.co/videos/preview/mixkit-digital-security-lock-on-a-circuit-board-1730-large.mp4" type="video/mp4"></video>
+        <div class="container">
+            <span class="slide-num">04. STABILIZATION</span>
+            <h1 class="title">Transaction Security</h1>
+            <div class="grid-box">
+                <div class="info-card">
+                    <h3>철저한 비공개 원칙 (NDA)</h3>
+                    <p>거래 상황 및 세부 내역이 외부로 노출되지 않도록 철저한 보안 유지</p>
+                </div>
+                <div class="info-card">
+                    <h3>예측 가능한 결과</h3>
+                    <p>확고한 계약 체결을 통해 판매 물량의 사전 예측과 결과 데이터 확보</p>
+                </div>
+                <div class="info-card">
+                    <h3>거래처 맞춤 관리</h3>
+                    <p>도매, 소매 유통 배송사, 대형 유통사 밴더 등 형태별 최적화된 계약 관계 구축</p>
+                </div>
             </div>
         </div>
     </section>
