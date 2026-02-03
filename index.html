@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S&H Global Trading Corp.</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <div class="container">
+        <div class="container header-flex">
             <div class="logo">
-                <span class="brand-name">S&H</span> <span class="sub-name">Global Trading Corp.</span>
+                <img src="S&H GLOBAL LOGO.png" alt="S&H Global Logo">
             </div>
             <nav>
                 <ul>
@@ -27,55 +26,74 @@
     </header>
 
     <section class="hero">
-        <div class="video-container">
-            <video autoplay muted loop playsinline id="bg-video">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-cargo-ship-sailing-in-the-ocean-15774-large.mp4" type="video/mp4">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-large-cargo-ship-in-the-middle-of-the-ocean-40012-large.mp4" type="video/mp4">
             </video>
         </div>
         <div class="hero-overlay">
-            <div class="hero-content">
-                <h1>Connecting Markets, Delivering Quality</h1>
-                <p>미국 내 유통 라인의 중심, S&H Global Trading Corp.이 함께합니다.</p>
-                <a href="#business" class="btn-main">사업 영역 보기</a>
+            <div class="hero-text">
+                <h1>S&H Global Trading Corp.</h1>
+                <p>Connecting Global Innovation to American Markets</p>
+                <div class="hero-btns">
+                    <a href="#about" class="btn-primary">회사 소개</a>
+                    <a href="#contact" class="btn-secondary">문의하기</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="content-section">
+    <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">About Us</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p><strong>S&H Global Trading Corp.</strong>은 2014년 설립 이래, 글로벌 공급망과 미국 내수 시장을 잇는 핵심 교두보 역할을 해왔습니다.</p>
-                    <p>단순한 유통을 넘어, 구매사의 이익을 최우선으로 하며 철저한 품질 보증과 클레임 해결을 책임지는 든든한 파트너입니다.</p>
-                    <ul class="info-list">
-                        <li><i class="fas fa-user-tie"></i> <strong>CEO:</strong> Jeffrey Han (한주희)</li>
-                        <li><i class="fas fa-map-marker-alt"></i> <strong>HQ:</strong> Austin, TX, USA</li>
-                        <li><i class="fas fa-shield-alt"></i> <strong>Policy:</strong> 철저한 비공개 원칙(NDA) 준수</li>
-                    </ul>
+            <div class="about-content">
+                <div class="about-main-text">
+                    <p><strong>S&H Global Trading Corp.</strong>은 2014년 설립 이후, 글로벌 시장의 우수한 제품을 발굴하여 미국 내 최적의 유통 라인에 공급하는 수입 유통 전문 파트너입니다.</p>
+                    <p>단순한 무역을 넘어 품질 보증, 클레임 해결, 그리고 비즈니스 컨설팅까지 통합 솔루션을 제공하며 고객사의 이익을 최우선으로 합니다.</p>
+                </div>
+                <div class="about-info-grid">
+                    <div class="info-item"><i class="fas fa-check-circle"></i> <strong>대표이사:</strong> Jeffrey Han (한주희)</div>
+                    <div class="info-item"><i class="fas fa-check-circle"></i> <strong>설립일:</strong> 2014년</div>
+                    <div class="info-item"><i class="fas fa-check-circle"></i> <strong>주소:</strong> Austin, TX, USA</div>
+                    <div class="info-item"><i class="fas fa-user-shield"></i> <strong>원칙:</strong> 철저한 비공개 보안(NDA) 유지</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="business" class="content-section bg-light">
+    <section id="business" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Business Areas</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <i class="fas fa-ship"></i>
-                    <h3>Import & Distribution</h3>
-                    <p>친환경 식품, 가정 잡화, 뷰티, IT 소모품 등 트렌디한 소비재의 직소싱 및 유통</p>
+            <div class="business-grid">
+                <div class="biz-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>친환경 식품 및 밀키트</h3>
+                    <p>자연 식재료, 트렌디한 밀키트 등 가격 경쟁력을 갖춘 고품질 식품 유통</p>
                 </div>
-                <div class="card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Business Consulting</h3>
-                    <p>해외 기업의 미국 법인 설립 및 시장 진출을 위한 전문적인 전략 컨설팅</p>
+                <div class="biz-card">
+                    <i class="fas fa-home"></i>
+                    <h3>가정 잡화 및 생활용품</h3>
+                    <p>고효율 생활 잡화 및 트렌디한 디자인의 라이프스타일 제품 직소싱</p>
                 </div>
-                <div class="card">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Strategic Partnership</h3>
-                    <p>Wholesale 및 대형 유통사 벤더를 위한 맞춤형 계약 및 물류 운영</p>
+                <div class="biz-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>뷰티 및 코스메틱</h3>
+                    <p>글로벌 기능성 화장품 및 안전성이 입증된 뷰티 라인 공급</p>
+                </div>
+                <div class="biz-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>IT 소모품 및 사무용품</h3>
+                    <p>혁신적인 디자인의 IT 주변기기 및 사무용 액세서리 대량 공급</p>
+                </div>
+                <div class="biz-card">
+                    <i class="fas fa-running"></i>
+                    <h3>레포츠 및 생활 보안</h3>
+                    <p>내구성이 검증된 라이프스타일 기어 및 시큐리티 제품 운영</p>
+                </div>
+                <div class="biz-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>비즈니스 컨설팅</h3>
+                    <p>외국 기업의 미국 법인 설립 및 시장 안착을 위한 전문 컨설팅</p>
                 </div>
             </div>
         </div>
@@ -83,8 +101,12 @@
 
     <footer id="contact">
         <div class="container">
-            <p>&copy; 2026 S&H Global Trading Corp. All Rights Reserved.</p>
-            <p>13740 N Highway 183 STE K1, Austin, TX 78750 | consulod@gmail.com</p>
+            <div class="footer-content">
+                <h3>Contact S&H Global</h3>
+                <p><i class="fas fa-envelope"></i> consulod@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 13740 N Highway 183 STE K1, Austin, TX 78750</p>
+                <p class="copyright">&copy; 2026 S&H Global Trading Corp. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
