@@ -1,156 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S&H Global Trade Corp | Professional Master Plan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>S&H Global Trade Corp.</title>
     <style>
-        :root { --gold: #C5A059; --light: #F9F9F9; --white: #FFFFFF; --dark: #1A1A1A; --text: #333; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; background: var(--white); color: var(--text); scroll-behavior: smooth; }
-        
-        /* Navigation with Logo */
-        nav { position: fixed; top: 0; width: 100%; height: 100px; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.98); backdrop-filter: blur(15px); z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .logo-box { display: flex; align-items: center; gap: 20px; }
-        .logo-box img { height: 70px; width: auto; } /* logo.png 연동 */
-        .logo-box .brand { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--dark); letter-spacing: 1px; }
-        .logo-box .brand span { color: var(--gold); }
-
-        section { min-height: 100vh; padding: 140px 10% 80px; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid #eee; }
-        
-        /* Slide 1: Professional Hero Video */
-        .hero { position: relative; height: 100vh; padding: 0; overflow: hidden; color: var(--white); text-align: center; }
-        .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; filter: brightness(0.5); }
-        .hero-content { position: relative; z-index: 2; top: 50%; transform: translateY(-50%); }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 3px; }
-        .hero p { font-size: 1.3rem; font-weight: 300; letter-spacing: 5px; color: var(--gold); }
-
-        /* General Typography */
-        h2 { font-family: 'Playfair Display', serif; font-size: 3.2rem; color: var(--dark); margin-bottom: 50px; position: relative; }
-        h2::after { content: ''; position: absolute; bottom: -15px; left: 0; width: 100px; height: 5px; background: var(--gold); }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-top: 50px; }
-        .card { background: var(--light); padding: 50px; transition: 0.5s; position: relative; overflow: hidden; border: 1px solid #eee; }
-        .card:hover { transform: translateY(-15px); background: var(--white); box-shadow: 0 30px 60px rgba(0,0,0,0.1); border-color: var(--gold); }
-        .card h3 { color: var(--gold); margin-bottom: 25px; font-size: 1.5rem; text-transform: uppercase; border-bottom: 1px solid #ddd; padding-bottom: 15px; }
-        
-        .timeline { margin-top: 40px; }
-        .t-item { display: flex; gap: 30px; margin-bottom: 35px; border-left: 3px solid var(--gold); padding-left: 30px; }
-        .year { font-weight: 700; color: var(--gold); font-size: 1.4rem; min-width: 80px; }
-        
-        /* Images Layer */
-        .img-box { width: 100%; height: 250px; background-size: cover; background-position: center; margin-bottom: 20px; border-radius: 5px; }
-
-        .footer-info { color: var(--text); font-size: 1.1rem; line-height: 2; }
-        .footer-info strong { color: var(--gold); }
+        body { margin: 0; padding: 0; font-family: sans-serif; background: #000; color: #fff; }
+        section { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 2px solid #333; }
+        .bg-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.7; z-index: -1; }
+        .content { text-align: center; z-index: 10; background: rgba(0,0,0,0.5); padding: 40px; border-radius: 10px; }
+        h1 { font-size: 3.5rem; color: #C5A059; margin: 0; }
+        p { font-size: 1.2rem; letter-spacing: 3px; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo-box">
-            <img src="logo.png" alt="S&H LOGO" onerror="this.src='https://via.placeholder.com/200x80?text=SH+GLOBAL'">
-            <div class="brand">S&H <span>GLOBAL TRADE</span></div>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="video.mp4" type="video/mp4">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-global-logistics-and-supply-chain-network-30545-large.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <p>TRUSTED IMPORT & DISTRIBUTION PARTNER</p>
-            <h1>Strategic Market Positioning</h1>
+    <section>
+        <div class="bg-img" style="background-image: url('trade_1.jpg');"></div>
+        <div class="content">
+            <h1>Global Trade</h1>
+            <p>S&H Global Strategic Partner</p>
         </div>
     </section>
 
     <section>
-        <h2>Executive Overview</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="img-box" style="background-image: url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=800&q=80');"></div>
-                <h3>Company Mission</h3>
-                <p><strong>CEO:</strong> JU HEE HAN (Jeffrey Han)</p>
-                <p>S&H Global Trade Corp. serves as a premier import and distribution partner, prioritizing client profitability and ensuring rigorous quality assurance across all trade channels.</p>
-            </div>
-            <div class="card">
-                <div class="img-box" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80');"></div>
-                <h3>Our Vision</h3>
-                <p>To be the leading specialist in importing consumer products tailored to current U.S. market trends, building a solidified distribution network.</p>
-            </div>
-        </div>
-    </section>
-
-    <section style="background: #fff;">
-        <h2>Growth Milestones</h2>
-        <div class="timeline">
-            <div class="t-item"><div class="year">2014</div><div><strong>Foundation</strong><br>Establishment of S&H Global Trade Corp. and entry into the global trade industry.</div></div>
-            <div class="t-item"><div class="year">2017</div><div><strong>Trend Adaptation</strong><br>Identifying emerging consumer trends to effectively adapt product portfolios.</div></div>
-            <div class="t-item"><div class="year">2018</div><div><strong>Diversification</strong><br>Expansion into business consulting and technical cooperation agreements.</div></div>
-            <div class="t-item"><div class="year">2020</div><div><strong>Client Focus</strong><br>Optimization of prompt client response systems and service capabilities.</div></div>
-            <div class="t-item"><div class="year">2023</div><div><strong>Global Expansion</strong><br>Strategic entry into overseas markets and increasing global operational reach.</div></div>
+        <div class="bg-img" style="background-image: url('lifestyle_1.jpg');"></div>
+        <div class="content">
+            <h1>General Merchandise</h1>
+            <p>Premium Lifestyle Solutions</p>
         </div>
     </section>
 
     <section>
-        <h2>Eco-Friendly & Healthcare</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Eco-Food Strategy</h3>
-                <p>(a) Natural ingredients & meal-kits with extreme price competitiveness.</p>
-                <p>(b) Quick response to shifting consumer preferences.</p>
-                <p>(c) Profit maximization through logistics optimization.</p>
-            </div>
-            <div class="card">
-                <h3>Healthcare Goods</h3>
-                <p>Sourcing premium medical and wellness products that meet the highest safety standards for the U.S. market.</p>
-            </div>
-        </div>
-    </section>
-
-    <section style="background: #fff;">
-        <h2>IT & Lifestyle Security</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>IT & Office Supplies</h3>
-                <p>Providing high-efficiency office equipment and innovative premium peripherals with a focus on durability and design.</p>
-            </div>
-            <div class="card">
-                <h3>Personal Security</h3>
-                <p>Innovative security gadgets and lifestyle safety products tailored for modern residential and personal needs.</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Service Specialization</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Import & Distribution</h3>
-                <p>A professional service that provides a "Profit Center" for clients by securing quality assurance and solving complex trade claims.</p>
-            </div>
-            <div class="card">
-                <h3>Business Consulting</h3>
-                <p>Expert consulting on U.S. entity establishment and market entry strategies for international corporations.</p>
-            </div>
-        </div>
-    </section>
-
-    <section style="background: #fff;">
-        <h2>Privacy & Contact</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Strict NDA Policy</h3>
-                <p><strong>Notice:</strong> S&H Global Trade Corp. does not operate a public website to protect the trade secrets and confidential transaction data of our client companies.</p>
-            </div>
-            <div class="card" class="footer-info">
-                <h3>Get In Touch</h3>
-                <p><strong>Address:</strong> 13740 N Highway 183 STE K1, Austin, TX 78750</p>
-                <p><strong>Email:</strong> consulod@gmail.com</p>
-                <p><strong>Phone:</strong> 202-679-0800 / 571-409-7878</p>
-            </div>
+        <div class="bg-img" style="background-image: url('agri_1.jpg');"></div>
+        <div class="content">
+            <h1>Eco-Agriculture</h1>
+            <p>Sustainable Supply Chain</p>
         </div>
     </section>
 
