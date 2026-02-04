@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S&H Global Trade Corp. | Business Master Plan</title>
+    <title>S&H Global Trade Corp. | Official Workspace</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #C5A059; --dark: #050505; --white: #ffffff; }
@@ -14,125 +14,105 @@
         .logo { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; }
 
         section { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; padding: 100px 8%; border-bottom: 1px solid #222; }
-        .bg-media { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 0.35; }
+        .bg-media { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 0.3; }
         .container { position: relative; z-index: 10; max-width: 1200px; width: 100%; }
 
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); padding: 50px; border-left: 5px solid var(--gold); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); padding: 50px; border-left: 5px solid var(--gold); }
         h1 { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
         h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); margin-bottom: 40px; }
-        h3 { color: var(--gold); font-size: 1.6rem; margin-bottom: 15px; border-bottom: 1px solid rgba(197,160,89,0.3); padding-bottom: 10px; }
-        p { font-size: 1.1rem; color: #ddd; margin-bottom: 20px; text-align: justify; }
+        h3 { color: var(--gold); font-size: 1.5rem; margin-bottom: 15px; border-bottom: 1px solid rgba(197,160,89,0.3); padding-bottom: 10px; }
+        p { font-size: 1.1rem; color: #ccc; margin-bottom: 20px; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 50px; }
-        .strategy-card { background: rgba(255,255,255,0.05); padding: 35px; border: 1px solid rgba(197,160,89,0.2); height: 100%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .strategy-card { background: rgba(255,255,255,0.05); padding: 30px; border: 1px solid rgba(197,160,89,0.2); }
         .strategy-card ul { list-style: none; margin-top: 20px; }
-        .strategy-card li { margin-bottom: 15px; padding-left: 25px; position: relative; font-size: 0.95rem; color: #bbb; }
+        .strategy-card li { margin-bottom: 10px; padding-left: 20px; position: relative; font-size: 0.9rem; color: #bbb; }
         .strategy-card li::before { content: '◈'; position: absolute; left: 0; color: var(--gold); }
 
-        .timeline { border-left: 2px solid var(--gold); padding-left: 40px; margin: 60px 0; }
-        .time-node { margin-bottom: 50px; position: relative; }
-        .time-node::before { content: ''; position: absolute; left: -51px; top: 8px; width: 20px; height: 20px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 15px var(--gold); }
-        .time-node h4 { font-size: 1.7rem; color: var(--gold); margin-bottom: 10px; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 40px; margin: 50px 0; }
+        .time-node { margin-bottom: 40px; position: relative; }
+        .time-node::before { content: ''; position: absolute; left: -51px; top: 8px; width: 20px; height: 20px; background: var(--gold); border-radius: 50%; }
+        .time-node h4 { font-size: 1.5rem; color: var(--gold); }
 
-        footer { background: #000; padding: 100px 8% 50px; border-top: 2px solid var(--gold); }
-        .footer-flex { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 50px; }
+        footer { background: #000; padding: 80px 8% 40px; border-top: 2px solid var(--gold); }
+        .footer-flex { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
 
-        @media (max-width: 768px) { h1 { font-size: 2.8rem; } .glass-card { padding: 30px; } nav { padding: 20px; } }
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } .footer-flex { flex-direction: column; } }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo">S&H GLOBAL TRADE</div>
-        <div style="font-size: 0.7rem; color: var(--gold); letter-spacing: 2px; text-align: right;">AUSTIN, TEXAS | EST. 2014</div>
+        <div style="font-size: 0.7rem; color: var(--gold); letter-spacing: 2px;">AUSTIN, TEXAS | EST. 2014</div>
     </nav>
 
-    <section id="home">
+    <section>
         <video class="bg-media" autoplay muted loop playsinline><source src="trade_main.mp4" type="video/mp4"></video>
         <div class="container">
             <div class="glass-card">
-                <span style="color:var(--gold); letter-spacing:5px; font-weight:600;">CORPORATE OVERVIEW</span>
-                <h1>Strategic Market <br>Positioning</h1>
-                <p><b>CEO: Jeffrey Han (Ju Hee Han)</b></p>
-                <p>S&H Global Trade Corp. leverages extensive expertise in international trade to connect premium suppliers with North American markets. We operate as a "Profit Center" for our partners, ensuring a robust supply chain, meticulous quality assurance, and comprehensive resolution of all distribution-related claims.</p>
-                <p>Our core mission is to establish a sophisticated franchise-style supply network that introduces high-quality consumer products adapted to current U.S. market trends.</p>
+                <span style="color:var(--gold); letter-spacing:5px;">CORPORATE PROFILE</span>
+                <h1>Strategic Market <br>Leadership</h1>
+                <p><b>CEO: Jeffrey Han</b></p>
+                <p>S&H Global Trade Corp. specializes in premium import and distribution, acting as a "Profit Center" for our partners. We ensure quality assurance and professional management of all logistics and claims within the North American market.</p>
+                <p>Our goal is to build a franchise-style supply chain that leads modern consumer trends with efficiency and reliability.</p>
             </div>
         </div>
     </section>
 
-    <section id="history">
+    <section>
         <video class="bg-media" autoplay muted loop playsinline><source src="sub_video_01.mp4" type="video/mp4"></video>
         <div class="container">
-            <h2>Growth & Evolution</h2>
+            <h2>Our History</h2>
             <div class="timeline">
                 <div class="time-node">
                     <h4>2014 - Establishment</h4>
-                    <p>Formal entry into the trade industry. Built the foundational infrastructure for specialized import and distribution services within the United States.</p>
+                    <p>Founded S&H Global Trade Corp. and built the foundation for high-end import services.</p>
                 </div>
                 <div class="time-node">
-                    <h4>2017 - Trend Adaptation</h4>
-                    <p>Initiated data-driven identification of emerging consumer trends. Signed technical cooperation agreements to diversify business consulting and service offerings.</p>
+                    <h4>2017 - Innovation</h4>
+                    <p>Started trend analysis and signed technical cooperation agreements to diversify offerings.</p>
                 </div>
                 <div class="time-node">
-                    <h4>2020 - Operational Excellence</h4>
-                    <p>Established advanced CRM and inventory systems for prompt client response, significantly enhancing customer service and logistical reliability.</p>
+                    <h4>2020 - System Excellence</h4>
+                    <p>Optimized CRM and logistics systems for rapid, high-quality client response.</p>
                 </div>
                 <div class="time-node">
-                    <h4>2023 - 2026 Global Reach</h4>
-                    <p>Strategic expansion into international markets, increasing global operational range and stabilizing the diversified trade portfolio.</p>
+                    <h4>2023 ~ 2026 - Global Reach</h4>
+                    <p>Expanding into international markets to secure a stable and diversified global portfolio.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="strategy">
+    <section>
         <img src="it_2.jpg" class="bg-media">
         <div class="container">
-            <h2 style="text-align:center;">Operational Business Units</h2>
+            <h2>Operational Strategies</h2>
             <div class="grid">
                 <div class="strategy-card">
                     <h3>Eco-Friendly Food</h3>
                     <ul>
-                        <li><b>(a)</b> Sourcing natural ingredients and Home Meal Replacements (HMR) focusing on high price-competitiveness.</li>
-                        <li><b>(b)</b> Aligning product selection with the health-conscious "Well-being" trends of modern U.S. consumers.</li>
-                        <li><b>(c)</b> Implementing rigorous cold-chain logistics and shelf-life monitoring systems.</li>
+                        <li><b>(a)</b> Strategic sourcing of natural ingredients and Home Meal Replacements (HMR).</li>
+                        <li><b>(b)</b> Aligning with the health-conscious "Well-being" trends in the U.S.</li>
+                        <li><b>(c)</b> Advanced cold-chain management to ensure product freshness.</li>
                     </ul>
                 </div>
                 <div class="strategy-card">
                     <h3>Beauty & Lifestyle</h3>
                     <ul>
-                        <li><b>(a)</b> Distributing functional cosmetics and skincare products compliant with global safety standards (FDA).</li>
-                        <li><b>(b)</b> Supplying trendy, high-durability household goods and office supplies for mass-market retail.</li>
-                        <li><b>(c)</b> Reducing intermediate costs via direct-to-retailer logistics to ensure market leadership.</li>
+                        <li><b>(a)</b> Functional cosmetics and skincare compliant with FDA safety standards.</li>
+                        <li><b>(b)</b> Trendy household goods and durable office supplies for mass distribution.</li>
+                        <li><b>(c)</b> Optimizing margins through direct-import and logistics efficiency.</li>
                     </ul>
                 </div>
                 <div class="strategy-card">
-                    <h3>IT & Security</h3>
+                    <h3>IT & Security Tech</h3>
                     <ul>
-                        <li><b>(a)</b> Reliable high-volume supply of PC peripherals, office consumables, and smart office solutions.</li>
-                        <li><b>(b)</b> Curating a portfolio of personal security devices and innovative lifestyle gadgets.</li>
-                        <li><b>(c)</b> Establishing priority access to next-generation tech specs through strategic hardware partnerships.</li>
+                        <li><b>(a)</b> Reliable supply of PC peripherals, consumables, and smart office solutions.</li>
+                        <li><b>(b)</b> Curating high-tech lifestyle gadgets and personal security devices.</li>
+                        <li><b>(c)</b> Priority access to latest technology via strategic hardware partnerships.</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sustainability">
-        <img src="agri_2.jpg" class="bg-media">
-        <div class="container">
-            <div class="glass-card">
-                <h2>Economic Sustainability</h2>
-                <p>S&H Global Trade Corp. is committed to fostering a resilient economic landscape. By connecting international innovation with local markets, we promote diversity and growth within the communities we serve.</p>
-                <div class="grid" style="margin-top:20px; grid-template-columns: 1fr 1fr;">
-                    <div>
-                        <h4 style="color:var(--gold);">Community Support</h4>
-                        <p style="font-size:0.9rem;">Empowering local startups through mentorship and resource sharing, contributing to sustainable job creation.</p>
-                    </div>
-                    <div>
-                        <h4 style="color:var(--gold);">Digital Precision</h4>
-                        <p style="font-size:0.9rem;">Utilizing advanced analytics to refine marketing outreach, ensuring our partners' products resonate with high-intent audiences.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -141,16 +121,16 @@
     <footer>
         <div class="footer-flex">
             <div>
-                <h2 style="font-size:2rem; margin-bottom:15px; color:var(--gold);">GET IN TOUCH</h2>
+                <h2 style="font-size:1.5rem; color:var(--gold);">CONTACT US</h2>
                 <p>13740 N Highway 183 STE K1, <br>AUSTIN, TEXAS 78750</p>
-                <p style="margin-top:10px;"><b>Email:</b> consulod@gmail.com <br><b>Tel:</b> 202-679-0800 / 571-409-7878</p>
+                <p><b>E:</b> consulod@gmail.com <br><b>P:</b> 202-679-0800 / 571-409-7878</p>
             </div>
-            <div style="max-width:550px; text-align:right;">
-                <h3 style="font-size:1.1rem; margin-bottom:10px;">CONFIDENTIALITY NOTICE</h3>
-                <p style="font-size:0.85rem; color:#777; line-height:1.6;">
-                    S&H Global Trade Corp. strictly adheres to Non-Disclosure Agreements (NDA) with our esteemed clients. Consequently, we do not operate a public official website. This platform serves as a secure business workspace for authorized partners.
+            <div style="max-width:500px; text-align:right;">
+                <h3 style="font-size:1rem;">NDA COMPLIANCE</h3>
+                <p style="font-size:0.8rem; color:#666;">
+                    S&H Global Trade Corp. does not operate a public website due to Non-Disclosure Agreements with our clients. This workspace is for authorized verification and internal business alignment only.
                 </p>
-                <p style="margin-top:30px; color:var(--gold); font-weight:600; letter-spacing:1px;">&copy; 2026 S&H Global Trade Corp. All Rights Reserved.</p>
+                <p style="margin-top:20px; color:var(--gold);">&copy; 2026 S&H Global Trade Corp. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
