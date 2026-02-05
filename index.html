@@ -6,7 +6,7 @@
 <title>S&H Global Trade Corp. - Master Plan</title>
 <style>
   body {
-    margin: 0; padding:0;
+    margin: 0; padding: 0;
     font-family: Arial, sans-serif;
     background-color: #F3F4F6;
     color: #111827;
@@ -20,7 +20,7 @@
   }
   .logo {
     max-height: 80px;
-    margin: 0 auto 10px;
+    margin: 0 auto 12px;
     display: block;
     filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));
   }
@@ -38,7 +38,7 @@
     text-decoration: none;
     font-weight: 600;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
   }
   nav a:hover, nav a.active {
     background-color: #3B82F6;
@@ -70,6 +70,14 @@
   ul {
     padding-left: 20px;
   }
+  .slide-image {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 12px;
+    margin: 20px auto 0 auto;
+    display: block;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  }
   .products {
     display: flex;
     flex-wrap: wrap;
@@ -89,13 +97,13 @@
     transform: scale(1.07);
     box-shadow: 0 12px 25px rgba(0,0,0,0.25);
   }
-  video {
+  video.main-video {
     width: 100%;
-    max-width: 720px;
+    max-width: 850px;
     border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.3);
     display: block;
-    margin: 30px auto 0 auto;
+    margin: 20px auto 0 auto;
   }
   .confidentiality {
     background-color: #D1D5DB;
@@ -107,10 +115,20 @@
     font-size: 1.2rem;
     color: #111;
   }
+  footer {
+    background-color: #CBD5E1;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    color: #374151;
+  }
   @media (max-width: 900px) {
     .products img {
       width: 45%;
       min-width: 220px;
+    }
+    .slide-image {
+      max-width: 100%;
     }
   }
   @media (max-width: 480px) {
@@ -133,14 +151,21 @@
 <header>
   <img src="logo.png" alt="S&H Global Trade Logo" class="logo" />
   <h1>S&H Global Trade Corp. - Master Plan</h1>
+  <video class="main-video" autoplay muted loop playsinline>
+    <source src="sub_video_01.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 </header>
 
 <nav>
   <a href="#vision" class="active">Vision & Values</a>
   <a href="#business">Business Types</a>
-  <a href="#products">Products & Strategy</a>
+  <a href="#products-food">Eco-friendly Foods</a>
+  <a href="#products-household">Household & Lifestyle</a>
+  <a href="#products-cosmetics">Cosmetics & Beauty</a>
+  <a href="#products-office">Office Supplies & IT</a>
+  <a href="#products-leisure">Leisure & Security</a>
   <a href="#confidentiality">Confidentiality</a>
-  <a href="#media">Media</a>
   <a href="#about">About Us</a>
 </nav>
 
@@ -148,63 +173,65 @@
 
   <section id="vision">
     <h2>Vision & Values</h2>
-    <p>Our vision is a specialist importer and distributor aligned with current US consumer trends, prioritizing high-quality products and sustainable growth.</p>
-    <p>We distribute eco-friendly foods, household goods, cosmetics, office supplies, leisure products, security devices, IT consumables, and more.</p>
-    <p>Our future strategy involves building market-leading distribution channels and franchising quality products.</p>
-    <img src="vision_image.jpg" alt="Vision Illustration" style="width:100%; max-width:600px; margin-top:20px; border-radius: 10px;" />
+    <p>We strive to be market leaders specialized in importing and distributing products aligning with evolving US consumer trends.</p>
+    <p>Our import portfolio spans eco-friendly foods, household goods, cosmetics, office supplies, leisure products, security gadgets, and IT consumables.</p>
+    <p>Committed to sustainable growth, we focus on franchising premium, quality products and strengthening distribution channels nationwide.</p>
+    <img src="trade_vision.jpg" alt="Vision Image" class="slide-image" />
   </section>
 
   <section id="business">
     <h2>Business Types</h2>
-    <ul>
-      <li><strong>Import-Distribution</strong>: Expert supply chain management to maximize client profitability.</li>
-      <li><strong>Business Consulting</strong>: Market entry and US entity setup for foreign companies.</li>
-    </ul>
-    <img src="business_image.jpg" alt="Business Operations" style="width:100%; max-width:600px; margin-top:20px; border-radius: 10px;" />
+    <p><strong>Import-Distribution</strong>: Supplying diverse product lines with quality assurance and client profitability.</p>
+    <p><strong>Business Consulting</strong>: Helping foreign companies establish US legal entities and market strategies.</p>
+    <img src="trade_business.jpg" alt="Business Types Image" class="slide-image" />
   </section>
 
-  <section id="products">
-    <h2>Products & Strategy</h2>
-    <ul>
-      <li><strong>Eco-friendly Foods</strong>: Natural ingredients, ready meals with competitive pricing and logistics optimization.</li>
-      <li><strong>Household & Lifestyle Products</strong>: Trendy, efficient daily goods sourced directly for cost savings.</li>
-      <li><strong>Cosmetics & Beauty</strong>: Certified global functional products with authenticity guarantees.</li>
-      <li><strong>Office Supplies & IT Consumables</strong>: Innovative, bulk-purchase competitive office equipment.</li>
-      <li><strong>Leisure & Security Products</strong>: Durable gadgets and security systems with flexible stock management.</li>
-    </ul>
+  <section id="products-food">
+    <h2>Eco-friendly Foods</h2>
+    <p>Natural ingredients, ready meals, meal kits, and trending products with optimized pricing and logistics.</p>
     <div class="products">
-      <img src="agri_1.jpg" alt="Agriculture Product" />
-      <img src="food_1.jpg" alt="Food Product" />
-      <img src="lifestyle_1.jpg" alt="Lifestyle Product" />
+      <img src="agri_1.jpg" alt="Eco-friendly Food 1" />
+      <img src="food_1.jpg" alt="Eco-friendly Food 2" />
     </div>
+  </section>
+
+  <section id="products-household">
+    <h2>Household & Lifestyle Products</h2>
+    <p>High-efficiency and trendy design daily goods through direct sourcing to reduce cost.</p>
+    <img src="household_1.jpg" alt="Household Product" class="slide-image" />
+  </section>
+
+  <section id="products-cosmetics">
+    <h2>Cosmetics & Beauty</h2>
+    <p>Global certified, functional products with safe and authentic lines.</p>
+    <img src="cosmetics_1.jpg" alt="Cosmetics Product" class="slide-image" />
+  </section>
+
+  <section id="products-office">
+    <h2>Office Supplies & IT Consumables</h2>
+    <p>Innovative office equipment and accessories, focusing on bulk purchase competitiveness.</p>
+    <img src="office_1.jpg" alt="Office Supplies Product" class="slide-image" />
+  </section>
+
+  <section id="products-leisure">
+    <h2>Leisure & Security Products</h2>
+    <p>Durable lifestyle gadgets and security devices with flexible inventory control.</p>
+    <img src="leisure_1.jpg" alt="Leisure Product" class="slide-image" />
   </section>
 
   <section id="confidentiality">
     <h2>Confidentiality</h2>
     <p class="confidentiality">
-      We maintain strict confidentiality of transactions and contracts,
-      ensuring all business dealings remain private and securely protected.
+      We strictly maintain confidentiality of all client transactions and contracts.<br/>
+      Business dealings are secured and protected from external exposure.<br/>
+      Trust through discretion is a key pillar of our operations.
     </p>
-  </section>
-
-  <section id="media">
-    <h2>Media</h2>
-    <video controls>
-      <source src="sub_video_01.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <video controls style="margin-top:20px;">
-      <source src="sub_video_03.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
   </section>
 
   <section id="about">
     <h2>About Us</h2>
-    <p>
-      Founded in 2014 by CEO Jeffrey Han, S&H Global Trading Corp. is located at 13740 N Highway 183 STE K1, Austin, TX 78750.
-      The company specializes in import-distribution with a core focus on client profitability, quality assurance, and claim resolution.
-    </p>
+    <p>Established in 2014 by CEO Jeffrey Han, located at 13740 N Highway 183 STE K1, Austin, TX 78750.</p>
+    <p>We specialize in import-distribution focusing on client profitability, quality assurance, and claim resolution.</p>
   </section>
 
 </div>
