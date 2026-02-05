@@ -283,6 +283,32 @@ window.addEventListener('scroll', () => {
     }
   });
 });
-</script>
+</script>const navLinks = document.querySelectorAll('nav a');
+const sections = document.querySelectorAll('.slides section');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    document.getElementById(targetId).scrollIntoView({behavior: 'smooth'});
+    navLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if(top <= window.innerHeight / 3) current = section.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if(link.getAttribute('href').substring(1) === current){
+      link.classList.add('active');
+    }
+  });
+});
+      </script>
 </body>
 </html>
