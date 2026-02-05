@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>S&H Global Trade Corp. - Master Plan</title>
+<title>S&H Global Trade Corp.</title>
 <style>
   body {
     margin: 0; padding: 0;
@@ -16,7 +16,9 @@
     color: white;
     text-align: center;
     padding: 30px 20px;
-    position: sticky; top: 0; z-index: 1000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   .logo {
     max-height: 80px;
@@ -29,7 +31,9 @@
     display: flex;
     justify-content: center;
     gap: 15px;
-    position: sticky; top: 110px; z-index: 999;
+    position: sticky;
+    top: 110px;
+    z-index: 999;
   }
   nav a {
     flex: none;
@@ -78,72 +82,6 @@
     display: block;
     box-shadow: 0 6px 18px rgba(0,0,0,0.2);
   }
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .products img {
-    width: 30%;
-    min-width: 280px;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .products img:hover {
-    transform: scale(1.07);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-  }
-  video.main-video {
-    width: 100%;
-    max-width: 850px;
-    border-radius: 12px;
-    box-shadow: 0 6px 22px rgba(0,0,0,0.3);
-    display: block;
-    margin: 20px auto 0 auto;
-  }
-  .confidentiality {
-    background-color: #D1D5DB;
-    border-left: 6px solid #1E3A8A;
-    padding: 20px 25px;
-    border-radius: 8px;
-    margin-top: 30px;
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: #111;
-  }
-  footer {
-    background-color: #CBD5E1;
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 14px;
-    color: #374151;
-  }
-  @media (max-width: 900px) {
-    .products img {
-      width: 45%;
-      min-width: 220px;
-    }
-    .slide-image {
-      max-width: 100%;
-    }
-  }
-  @media (max-width: 480px) {
-    .products img {
-      width: 90%;
-      min-width: auto;
-    }
-    nav {
-      gap: 8px; flex-wrap: wrap;
-    }
-    nav a {
-      padding: 10px 12px;
-      font-size: 14px;
-    }
-  }
 </style>
 </head>
 <body>
@@ -151,94 +89,42 @@
 <header>
   <img src="logo.png" alt="S&H Global Trade Logo" class="logo" />
   <h1>S&H Global Trade Corp. - Master Plan</h1>
-  <video class="main-video" autoplay muted loop playsinline>
-    <source src="sub_video_01.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
 </header>
 
 <nav>
-  <a href="#vision" class="active">Vision & Values</a>
-  <a href="#business">Business Types</a>
-  <a href="#products-food">Eco-friendly Foods</a>
-  <a href="#products-household">Household & Lifestyle</a>
-  <a href="#products-cosmetics">Cosmetics & Beauty</a>
-  <a href="#products-office">Office Supplies & IT</a>
-  <a href="#products-leisure">Leisure & Security</a>
-  <a href="#confidentiality">Confidentiality</a>
-  <a href="#about">About Us</a>
+  <a href="#slide1" class="active">Vision & Values</a>
+  <a href="#slide2">Business Types</a>
+  <a href="#slide3">Products & Strategy</a>
+  <a href="#slide4">Confidentiality</a>
+  <a href="#slide5">About Us</a>
 </nav>
 
 <div class="slides" id="slides">
-
-  <section id="vision">
+  <section id="slide1">
     <h2>Vision & Values</h2>
-    <p>We strive to be market leaders specialized in importing and distributing products aligning with evolving US consumer trends.</p>
-    <p>Our import portfolio spans eco-friendly foods, household goods, cosmetics, office supplies, leisure products, security gadgets, and IT consumables.</p>
-    <p>Committed to sustainable growth, we focus on franchising premium, quality products and strengthening distribution channels nationwide.</p>
-    <img src="trade_vision.jpg" alt="Vision Image" class="slide-image" />
+    <p>Comprehensive and enriched content here...</p>
+    <img src="vision_img.jpg" alt="Vision Image" class="slide-image" />
   </section>
-
-  <section id="business">
+  <section id="slide2">
     <h2>Business Types</h2>
-    <p><strong>Import-Distribution</strong>: Supplying diverse product lines with quality assurance and client profitability.</p>
-    <p><strong>Business Consulting</strong>: Helping foreign companies establish US legal entities and market strategies.</p>
-    <img src="trade_business.jpg" alt="Business Types Image" class="slide-image" />
+    <p>Detailed business type content here...</p>
+    <img src="business_img.jpg" alt="Business Image" class="slide-image" />
   </section>
-
-  <section id="products-food">
-    <h2>Eco-friendly Foods</h2>
-    <p>Natural ingredients, ready meals, meal kits, and trending products with optimized pricing and logistics.</p>
-    <div class="products">
-      <img src="agri_1.jpg" alt="Eco-friendly Food 1" />
-      <img src="food_1.jpg" alt="Eco-friendly Food 2" />
-    </div>
+  <section id="slide3">
+    <h2>Products & Strategy</h2>
+    <p>Deep product descriptions...</p>
+    <img src="product_img_1.jpg" alt="Product Image 1" class="slide-image" />
+    <img src="product_img_2.jpg" alt="Product Image 2" class="slide-image" />
   </section>
-
-  <section id="products-household">
-    <h2>Household & Lifestyle Products</h2>
-    <p>High-efficiency and trendy design daily goods through direct sourcing to reduce cost.</p>
-    <img src="household_1.jpg" alt="Household Product" class="slide-image" />
-  </section>
-
-  <section id="products-cosmetics">
-    <h2>Cosmetics & Beauty</h2>
-    <p>Global certified, functional products with safe and authentic lines.</p>
-    <img src="cosmetics_1.jpg" alt="Cosmetics Product" class="slide-image" />
-  </section>
-
-  <section id="products-office">
-    <h2>Office Supplies & IT Consumables</h2>
-    <p>Innovative office equipment and accessories, focusing on bulk purchase competitiveness.</p>
-    <img src="office_1.jpg" alt="Office Supplies Product" class="slide-image" />
-  </section>
-
-  <section id="products-leisure">
-    <h2>Leisure & Security Products</h2>
-    <p>Durable lifestyle gadgets and security devices with flexible inventory control.</p>
-    <img src="leisure_1.jpg" alt="Leisure Product" class="slide-image" />
-  </section>
-
-  <section id="confidentiality">
+  <section id="slide4">
     <h2>Confidentiality</h2>
-    <p class="confidentiality">
-      We strictly maintain confidentiality of all client transactions and contracts.<br/>
-      Business dealings are secured and protected from external exposure.<br/>
-      Trust through discretion is a key pillar of our operations.
-    </p>
+    <p>Confidentiality clauses and important statement...</p>
   </section>
-
-  <section id="about">
+  <section id="slide5">
     <h2>About Us</h2>
-    <p>Established in 2014 by CEO Jeffrey Han, located at 13740 N Highway 183 STE K1, Austin, TX 78750.</p>
-    <p>We specialize in import-distribution focusing on client profitability, quality assurance, and claim resolution.</p>
+    <p>Company background and info...</p>
   </section>
-
 </div>
-
-<footer>
-  <p>&copy; 2026 S&H Global Trade Corp. All rights reserved.</p>
-</footer>
 
 <script>
   const navLinks = document.querySelectorAll('nav a');
@@ -248,8 +134,8 @@
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      document.getElementById(targetId).scrollIntoView({behavior: 'smooth'});
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({behavior: 'smooth'});
       navLinks.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
     });
@@ -258,8 +144,10 @@
   slides.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      if(sectionTop <= window.innerHeight / 3) current = section.id;
+      const box = section.getBoundingClientRect();
+      if(box.top <= window.innerHeight / 3 && box.bottom >= window.innerHeight / 3){
+        current = section.id;
+      }
     });
     navLinks.forEach(link => {
       link.classList.remove('active');
