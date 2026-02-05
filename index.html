@@ -1,59 +1,137 @@
-header {
-  background-color: #4caf50;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SNH Trade Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e9f0ea; /* 너무 밝지 않은 화사한 연녹색으로 차분하게 */
+      color: #333333;
+      margin: 0;
+      padding: 0 20px;
+    }
 
-.logo {
-  max-height: 60px;
-  margin: 0 auto 10px;
-  display: block;
-}
+    header {
+      background-color: #3a7a40; /* 녹색 계열 더 짙게 해 전문적이고 안정감 있게 */
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+    }
 
-h1 {
-  margin: 10px 0 30px;
-}
+    .logo {
+      max-height: 60px;
+      display: block;
+      margin: 0 auto 15px;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));
+    }
 
-.images-section {
-  text-align: center;
-  margin: 40px auto 30px;
-  max-width: 1000px;
-}
+    h1, h2 {
+      margin: 10px 0;
+      font-weight: 700;
+    }
 
-.images-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 25px;
-  font-weight: bold;
-  color: #333;
-}
+    .images-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 50px auto 40px;
+      max-width: 1100px;
+      text-align: center;
+    }
 
-.images-section img {
-  width: 30%;
-  min-width: 200px;
-  margin: 0 10px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  vertical-align: middle;
-}
+    .images-section h2 {
+      width: 100%;
+      font-size: 2rem;
+      color: #2e4b25;
+      margin-bottom: 30px;
+    }
 
-.video-section {
-  max-width: 660px;
-  margin: 0 auto 40px;
-  text-align: center;
-}
+    .images-section img {
+      width: 30%;
+      min-width: 260px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .images-section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
 
-.video-section h2 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
+    .video-section {
+      max-width: 700px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
 
-footer {
-  background-color: #ddd;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 14px;
-  color: #555;
-}
+    .video-section h2 {
+      font-size: 2rem;
+      color: #2e4b25;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    }
+
+    footer {
+      background-color: #c5d4b8;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      color: #3a3a3a;
+      font-weight: 500;
+      margin-top: 60px;
+      user-select: none;
+    }
+
+    /* 반응형 간단 적용 */
+    @media (max-width: 900px) {
+      .images-section img {
+        width: 45%;
+        min-width: 200px;
+      }
+    }
+    @media (max-width: 500px) {
+      .images-section img {
+        width: 90%;
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="SNH Trade Logo" class="logo" />
+    <h1>Welcome to SNH Trade</h1>
+  </header>
+
+  <main>
+    <section class="images-section">
+      <h2>Our Products</h2>
+      <img src="agri_1.jpg" alt="Agriculture Product" />
+      <img src="food_1.jpg" alt="Food Product" />
+      <img src="lifestyle_1.jpg" alt="Lifestyle Product" />
+    </section>
+
+    <section class="video-section">
+      <h2>Introduction Video</h2>
+      <video controls>
+        <source src="sub_video_01.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 SNH Trade. All rights reserved.</p>
+  </footer>
+</body>
+</html>
