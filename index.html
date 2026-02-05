@@ -1,36 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SNH Trade Website</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="SNH Trade Logo" class="logo" />
-    <h1>Welcome to SNH Trade</h1>
-  </header>
+.images-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
 
-  <main>
-    <section class="images-section">
-      <h2>Our Products</h2>
-      <img src="agri_1.jpg" alt="Agriculture Product" />
-      <img src="food_1.jpg" alt="Food Product" />
-      <img src="lifestyle_1.jpg" alt="Lifestyle Product" />
-    </section>
-
-    <section class="video-section">
-      <h2>Introduction Video</h2>
-      <video controls width="640" height="360">
-        <source src="sub_video_01.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 SNH Trade. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+.images-section img {
+  width: 30%;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
