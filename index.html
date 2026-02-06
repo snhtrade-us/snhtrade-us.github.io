@@ -11,40 +11,41 @@
     background-color: #F3F4F6;
     color: #111827;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
   }
   .slides {
-    width: 80%;
+    width: 90%;
     max-width: 600px;
-    background: white;
-    padding: 20px;
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     text-align: center;
   }
   .slide {
     display: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .slide.active {
     display: block;
   }
   .nav-dots {
-    margin-top: 15px;
+    margin-top: 20px;
   }
   .nav-dots button {
     border: none;
-    background: #ccc;
+    background-color: #bbb;
     border-radius: 50%;
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     margin: 0 8px;
     cursor: pointer;
+    transition: background-color 0.3s;
   }
   .nav-dots button.active {
-    background: #111827;
+    background-color: #111827;
   }
 </style>
 </head>
@@ -63,7 +64,7 @@
     <h2>슬라이드 3</h2>
     <p>세 번째 슬라이드 내용입니다.</p>
   </div>
-
+  
   <div class="nav-dots">
     <button class="active" aria-label="슬라이드 1" data-index="0"></button>
     <button aria-label="슬라이드 2" data-index="1"></button>
@@ -84,17 +85,16 @@
     currentIndex = index;
   }
 
-  dots.forEach((dot) => {
+  dots.forEach(dot => {
     dot.addEventListener('click', () => {
       showSlide(parseInt(dot.dataset.index));
     });
   });
 
-  // 자동 슬라이드 (원치 않으면 아래 코드 삭제 가능)
   setInterval(() => {
-    let next = (currentIndex + 1) % slides.length;
-    showSlide(next);
-  }, 5000);
+    let nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  }, 4000);
 </script>
 
 </body>
