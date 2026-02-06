@@ -1,250 +1,64 @@
-/* 1. Global Reset & Typography */
 :root {
     --gold: #c5a059;
-    --gold-bright: #e3c18d;
-    --navy: #050a14;
-    --navy-light: #0f172a;
+    --navy: #0a192f;
+    --light-gray: #f8f9fa;
     --white: #ffffff;
-    --gray: #94a3b8;
+    --text: #333333;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; overflow-x: hidden; }
 
-body {
-    font-family: 'Montserrat', sans-serif; /* Modern & Clean */
-    background-color: var(--navy);
-    color: var(--white);
-    line-height: 1.7;
-    overflow-x: hidden;
-}
-
-/* 2. Navigation - Crystal Glassmorphism */
+/* Navigation */
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    background: rgba(5, 10, 20, 0.8);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    position: fixed; width: 100%; padding: 20px 8%; display: flex; justify-content: space-between;
+    align-items: center; z-index: 1000; background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
+.logo img { height: 40px; }
+nav ul { display: flex; list-style: none; gap: 35px; }
+nav ul li a { color: var(--text); text-decoration: none; font-weight: 700; font-size: 0.75rem; letter-spacing: 1.5px; }
 
-.logo img {
-    height: 40px; /* 로고 크기 최적화 */
-    transition: transform 0.3s ease;
-}
+/* Hero Section */
+#hero { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+.bg-video { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.45); }
+.hero-overlay h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; letter-spacing: -1px; }
+.ceo { color: var(--gold); font-size: 1.5rem; font-weight: bold; margin: 15px 0; letter-spacing: 4px; }
+.mission-tag { font-size: 1.1rem; opacity: 0.9; font-weight: 300; }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-}
+/* Timeline Section */
+.section-padding { padding: 120px 10%; background: var(--light-gray); }
+.section-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; text-align: center; margin-bottom: 80px; color: var(--navy); }
+.timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; }
+.tl-item { border-top: 4px solid var(--gold); padding-top: 25px; background: white; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+.tl-item strong { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 15px; }
+.tl-item p { font-size: 0.9rem; color: #666; }
 
-nav ul li a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    transition: color 0.3s;
-}
+/* Product Slides */
+.product-slide { display: flex; align-items: center; padding: 100px 10%; gap: 70px; min-height: 80vh; }
+.product-slide.reverse { flex-direction: row-reverse; background: #fafafa; }
+.p-text { flex: 1; }
+.p-num { font-size: 6rem; font-weight: 900; color: var(--gold); opacity: 0.15; display: block; margin-bottom: -40px; }
+.p-text h3 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 30px; color: var(--navy); }
+.strategy-list { list-style: none; }
+.strategy-list li { margin-bottom: 15px; font-size: 1rem; color: #555; }
+.strategy-list strong { color: var(--gold); }
 
-nav ul li a:hover {
-    color: var(--gold);
-}
+.p-images { flex: 1.5; display: flex; gap: 20px; }
+.p-images img { width: 50%; height: 500px; object-fit: cover; border-radius: 4px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: 0.4s; }
+.p-images img:hover { transform: translateY(-10px); }
 
-/* 3. Hero Section - Cinematic Video */
-#hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+/* Security Section */
+#security { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+.security-card { background: rgba(10, 25, 47, 0.85); padding: 70px; border: 1px solid var(--gold); max-width: 900px; backdrop-filter: blur(10px); }
+.security-card h2 { color: var(--gold); font-size: 2.8rem; letter-spacing: 5px; margin-bottom: 30px; }
+.nda-p { font-size: 1.3rem; margin-bottom: 25px; font-weight: 700; }
+.nda-detail { font-size: 1rem; color: #ccc; margin-bottom: 40px; }
+.contact-footer { border-top: 1px solid rgba(197, 160, 89, 0.3); padding-top: 35px; font-size: 0.95rem; }
 
-.bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    filter: brightness(0.4) contrast(1.1); /* 너무 어둡지 않게 조정 */
-}
+footer { padding: 40px; text-align: center; font-size: 0.8rem; color: #999; }
 
-.hero-content h1 {
-    font-size: 4.5rem;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: -1px;
-    margin-bottom: 10px;
-}
-
-.ceo-name {
-    color: var(--gold);
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: 3px;
-}
-
-.hero-tagline {
-    font-size: 1.1rem;
-    color: var(--gray);
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* 4. Timeline - Professional Grid */
-.section-padding {
-    padding: 120px 10%;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: var(--gold);
-    text-align: center;
-    margin-bottom: 80px;
-    letter-spacing: 5px;
-}
-
-.timeline {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-}
-
-.timeline-item {
-    border-left: 2px solid var(--gold);
-    padding: 20px;
-    background: var(--navy-light);
-    transition: 0.3s;
-}
-
-.timeline-item:hover {
-    background: rgba(197, 160, 89, 0.1);
-    transform: translateY(-5px);
-}
-
-.timeline-item strong {
-    font-size: 1.8rem;
-    color: var(--gold);
-    display: block;
-    margin-bottom: 10px;
-}
-
-/* 5. Product Slides - Dynamic Layout */
-.product-slide {
-    display: flex;
-    align-items: center;
-    padding: 100px 10%;
-    gap: 80px;
-    min-height: 80vh;
-}
-
-.alt-bg {
-    background-color: var(--navy-light);
-}
-
-.product-text {
-    flex: 1;
-}
-
-.category-num {
-    font-size: 5rem;
-    font-weight: 800;
-    color: var(--gold);
-    opacity: 0.2;
-}
-
-.product-text h2 {
-    font-size: 3rem;
-    margin-top: -40px;
-    margin-bottom: 25px;
-}
-
-.product-gallery {
-    flex: 1.2;
-    display: flex;
-    gap: 20px;
-}
-
-.product-gallery img {
-    width: 50%;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid rgba(197, 160, 89, 0.3);
-    transition: 0.5s ease;
-}
-
-.product-gallery img:hover {
-    transform: scale(1.05);
-    border-color: var(--gold);
-}
-
-/* 6. NDA Section - High Security Feel */
-#security {
-    position: relative;
-    padding: 150px 10%;
-    display: flex;
-    justify-content: center;
-}
-
-.nda-box {
-    background: rgba(5, 10, 20, 0.9);
-    border: 2px solid var(--gold);
-    padding: 60px;
-    max-width: 900px;
-    text-align: center;
-    box-shadow: 0 0 50px rgba(197, 160, 89, 0.15);
-}
-
-.nda-box h2 {
-    color: var(--gold);
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-    letter-spacing: 4px;
-}
-
-.nda-statement {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    color: #e2e8f0;
-}
-
-.contact-details {
-    border-top: 1px solid rgba(197, 160, 89, 0.3);
-    padding-top: 30px;
-    font-size: 0.95rem;
-    color: var(--gray);
-}
-
-/* 7. Footer */
-footer {
-    padding: 40px;
-    text-align: center;
-    background: #020617;
-    font-size: 0.8rem;
-    color: #475569;
-}
-
-/* Animations */
-.fade-in {
-    animation: fadeIn 2s ease-in;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+@media (max-width: 968px) {
+    .product-slide, .product-slide.reverse { flex-direction: column; text-align: center; padding: 60px 5%; }
+    .p-images { width: 100%; }
+    .hero-overlay h1 { font-size: 2.5rem; }
 }
