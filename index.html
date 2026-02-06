@@ -9,65 +9,81 @@
 </head>
 <body>
 
-    <nav>
-        <div class="logo">S&H Global Trade</div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#confidentiality">Security</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav>
+    <div class="logo">S&H Global Trade Corp.</div>
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#product1">Eco-Food</a></li>
+        <li><a href="#product2">Living</a></li>
+        <li><a href="#product3">Beauty</a></li>
+        <li><a href="#confidentiality">Security</a></li>
+    </ul>
+</nav>
 
-    <header class="hero">
-        <div class="video-container">
-            <video autoplay muted loop id="hero-video">
-                <source src="sub_video_01.mp4" type="video/mp4">
-            </video>
+<section id="hero" class="full-section">
+    <video autoplay muted loop class="bg-video">
+        <source src="sub_video_01.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-content">
+        <h1>Strategic Market Positioning</h1>
+        <p>Expert Import-Distribution Partner since 2014</p>
+    </div>
+</section>
+
+<section id="product1" class="full-section product-slide">
+    <div class="content-box">
+        <h2>01. Eco-friendly Food</h2>
+        <div class="image-gallery">
+            <img src="eco_01.jpg" class="active">
+            <img src="eco_02.jpg">
+            <img src="eco_03.jpg">
         </div>
-        <div class="hero-text">
-            <h1>Expert Import-Distribution Partner</h1>
-            <p>Maximizing Client Interests through Quality Assurance & Global Sourcing</p>
+        <p>Natural ingredients, Meal-kits, and Strategic Logistics.</p>
+    </div>
+</section>
+
+<section id="product2" class="full-section">
+    <video autoplay muted loop class="bg-video">
+        <source src="sub_video_02.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-content">
+        <h2>02. Household & Living</h2>
+        <div class="image-gallery">
+            <img src="living_01.jpg" class="active">
+            <img src="living_02.jpg">
         </div>
-    </header>
+        <p>Trendy design and high-efficiency daily necessities through direct sourcing.</p>
+    </div>
+</section>
 
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <div class="about-grid">
-            <p>Established in 2014, S&H Global Trade Corp. is a specialized import and distribution company focusing on eco-friendly products, household goods, and IT consumables tailored to U.S. market trends.</p>
-        </div>
-    </section>
+<section id="confidentiality" class="full-section security-bg">
+    <video autoplay muted loop class="bg-video">
+        <source src="sub_video_03.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-content highlight">
+        <h2><i class="fas fa-shield-alt"></i> STRICT CONFIDENTIALITY</h2>
+        <p>"S&H Global Trade Corp. does not operate a public official website to detail all transactions due to non-disclosure agreements with our client companies."</p>
+        <p>We prioritize partner security and transaction data protection.</p>
+    </div>
+</section>
 
-    <section id="products" class="section gray">
-        <h2>Our Products</h2>
-        <div class="product-slider">
-            <div class="slide">
-                <h3>Eco-Friendly Food & Lifestyle</h3>
-                <div class="image-grid">
-                    <img src="product_eco_01.jpg" alt="Eco Food 1">
-                    <img src="product_eco_02.jpg" alt="Eco Food 2">
-                </div>
-                <p>Natural ingredients, meal kits, and trend-focused sustainable products.</p>
-            </div>
-            </div>
-    </section>
+<footer>
+    <p>13740 N Highway 183 STE K1, AUSTIN, TX 78750 | consulod@gmail.com</p>
+</footer>
 
-    <section id="confidentiality" class="section black">
-        <h2><i class="fas fa-user-shield"></i> Strict Confidentiality</h2>
-        <div class="confidential-content">
-            <p>"S&H Global Trade Corp. does not operate a public official website to detail all transactions due to non-disclosure agreements with our client companies."</p>
-            <p>We prioritize the security of our partners and ensure that all transaction details remain strictly confidential.</p>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="footer-info">
-            <p><strong>CEO:</strong> Jeffrey Han (Ju Hee Han)</p>
-            <p><strong>Address:</strong> 13740 N Highway 183 STE K1, AUSTIN, TX 78750</p>
-            <p><strong>Contact:</strong> consulod@gmail.com | 202-679-0800</p>
-        </div>
-        <p class="copyright">&copy; 2024 S&H Global Trade Corp. All Rights Reserved.</p>
-    </footer>
-
+<script>
+    // 간단한 자동 이미지 슬라이드 기능
+    document.querySelectorAll('.image-gallery').forEach(gallery => {
+        let imgs = gallery.querySelectorAll('img');
+        let i = 0;
+        if(imgs.length > 1) {
+            setInterval(() => {
+                imgs[i].classList.remove('active');
+                i = (i + 1) % imgs.length;
+                imgs[i].classList.add('active');
+            }, 3000);
+        }
+    });
+</script>
 </body>
 </html>
