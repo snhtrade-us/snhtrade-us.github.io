@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S&H Global Trade Corp.</title>
+    <title>S&H Global Trade Corp. | Official</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,11 +12,11 @@
 <nav>
     <div class="logo">S&H Global Trade Corp.</div>
     <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#product1">Eco-Food</a></li>
-        <li><a href="#product2">Living</a></li>
-        <li><a href="#product3">Beauty</a></li>
-        <li><a href="#confidentiality">Security</a></li>
+        <li><a href="#hero">HOME</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#vision">VISION</a></li>
+        <li><a href="#strategy">STRATEGY</a></li>
+        <li><a href="#security">SECURITY</a></li>
     </ul>
 </nav>
 
@@ -24,66 +24,86 @@
     <video autoplay muted loop class="bg-video">
         <source src="sub_video_01.mp4" type="video/mp4">
     </video>
-    <div class="overlay-content">
-        <h1>Strategic Market Positioning</h1>
-        <p>Expert Import-Distribution Partner since 2014</p>
+    <div class="overlay">
+        <h1 class="fade-in">Strategic Market Positioning</h1>
+        <p class="fade-in">CEO: Jeffrey Han (Ju Hee Han)</p>
+        <div class="scroll-down"></div>
     </div>
 </section>
 
-<section id="product1" class="full-section product-slide">
-    <div class="content-box">
-        <h2>01. Eco-friendly Food</h2>
-        <div class="image-gallery">
-            <img src="eco_01.jpg" class="active">
-            <img src="eco_02.jpg">
-            <img src="eco_03.jpg">
+<section id="about" class="content-section">
+    <div class="container">
+        <h2>Company Overview</h2>
+        <p class="sub-text">Founded in 2014, S&H Global Trading Corp. is a specialized import and distribution partner.</p>
+        <div class="history-timeline">
+            <div class="time-item"><span>2014</span><p>Establishment & Entry into Trade Industry</p></div>
+            <div class="time-item"><span>2017</span><p>Identifying Emerging Consumer Trends</p></div>
+            <div class="time-item"><span>2020</span><p>Advanced Client Response Systems</p></div>
+            <div class="time-item"><span>2023</span><p>Strategic Global Market Expansion</p></div>
         </div>
-        <p>Natural ingredients, Meal-kits, and Strategic Logistics.</p>
     </div>
 </section>
 
-<section id="product2" class="full-section">
+<section id="vision" class="full-section">
     <video autoplay muted loop class="bg-video">
         <source src="sub_video_02.mp4" type="video/mp4">
     </video>
-    <div class="overlay-content">
-        <h2>02. Household & Living</h2>
-        <div class="image-gallery">
-            <img src="living_01.jpg" class="active">
-            <img src="living_02.jpg">
-        </div>
-        <p>Trendy design and high-efficiency daily necessities through direct sourcing.</p>
+    <div class="overlay-card">
+        <h2>Vision & Values</h2>
+        <ul>
+            <li><strong>Vision:</strong> Specialized distribution matching U.S. consumer trends.</li>
+            <li><strong>Strategy:</strong> Establishing robust trade lines for new import products.</li>
+            <li><strong>Core Value:</strong> Franchising high-quality supply chains.</li>
+        </ul>
     </div>
 </section>
 
-<section id="confidentiality" class="full-section security-bg">
+<section id="strategy" class="content-section gray-bg">
+    <h2>Detailed Business Strategy</h2>
+    <div class="product-master-slider">
+        <div class="product-item">
+            <div class="product-info">
+                <h3>01. Eco-Friendly Food</h3>
+                <p>Natural ingredients, Meal-kits, and Strategic Logistics for price competitiveness.</p>
+            </div>
+            <div class="product-images">
+                <img src="eco_01.jpg" alt="Eco 1">
+                <img src="eco_02.jpg" alt="Eco 2">
+                <img src="eco_03.jpg" alt="Eco 3">
+            </div>
+        </div>
+
+        <div class="product-item">
+            <div class="product-info">
+                <h3>02. Household & Beauty</h3>
+                <p>High-efficiency living goods and global functional beauty products with safety assurance.</p>
+            </div>
+            <div class="product-images">
+                <img src="living_01.jpg" alt="Living 1">
+                <img src="beauty_01.jpg" alt="Beauty 1">
+            </div>
+        </div>
+        </div>
+</section>
+
+<section id="security" class="full-section">
     <video autoplay muted loop class="bg-video">
         <source src="sub_video_03.mp4" type="video/mp4">
     </video>
-    <div class="overlay-content highlight">
-        <h2><i class="fas fa-shield-alt"></i> STRICT CONFIDENTIALITY</h2>
+    <div class="security-banner">
+        <h2><i class="fas fa-user-secret"></i> STRICT NON-DISCLOSURE</h2>
         <p>"S&H Global Trade Corp. does not operate a public official website to detail all transactions due to non-disclosure agreements with our client companies."</p>
-        <p>We prioritize partner security and transaction data protection.</p>
+        <div class="security-points">
+            <span>#Security_First</span> <span>#Client_Protection</span> <span>#NDA_Compliant</span>
+        </div>
     </div>
 </section>
 
 <footer>
-    <p>13740 N Highway 183 STE K1, AUSTIN, TX 78750 | consulod@gmail.com</p>
+    <p>13740 N Highway 183 STE K1, AUSTIN, TX 78750</p>
+    <p>consulod@gmail.com | 202-679-0800</p>
+    <p>&copy; S&H Global Trade Corp. All Rights Reserved.</p>
 </footer>
 
-<script>
-    // 간단한 자동 이미지 슬라이드 기능
-    document.querySelectorAll('.image-gallery').forEach(gallery => {
-        let imgs = gallery.querySelectorAll('img');
-        let i = 0;
-        if(imgs.length > 1) {
-            setInterval(() => {
-                imgs[i].classList.remove('active');
-                i = (i + 1) % imgs.length;
-                imgs[i].classList.add('active');
-            }, 3000);
-        }
-    });
-</script>
 </body>
 </html>
