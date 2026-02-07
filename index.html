@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,25 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S&H Global Trading Corp.</title>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #f8f9fa; color: #333; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; }
-        .card { background: white; padding: 40px; border-top: 8px solid #002D62; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 500px; border-radius: 8px; }
-        h1 { color: #002D62; font-size: 24px; margin-bottom: 10px; }
-        p { line-height: 1.6; color: #555; }
-        .nda-box { background: #fff3cd; padding: 15px; border: 1px solid #ffeeba; color: #856404; font-weight: bold; margin: 20px 0; border-radius: 4px; }
-        .address { font-size: 13px; color: #888; margin-top: 30px; }
+        /* 기본 스타일 */
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Helvetica Neue', Arial, sans-serif; color: white; background-color: #000; }
+        
+        /* 배경 설정 (비즈니스 느낌의 고화질 빌딩 사진) */
+        .hero { 
+            background: linear-gradient(rgba(0, 31, 63, 0.7), rgba(0, 31, 63, 0.7)), 
+            url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center; height: 100vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+        }
+
+        /* 슬라이드 박스 구성 */
+        .container { max-width: 800px; padding: 40px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); border-radius: 20px; backdrop-filter: blur(10px); }
+        h1 { font-size: 3rem; margin: 0 0 20px 0; letter-spacing: 2px; }
+        .subtitle { font-size: 1.5rem; color: #adb5bd; margin-bottom: 30px; }
+        .description { font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; color: #e9ecef; }
+        
+        /* 보안 공지 (NDA) */
+        .nda-notice { color: #ffc107; font-weight: bold; border: 1px solid #ffc107; padding: 10px 20px; display: inline-block; border-radius: 5px; margin-top: 20px; }
+        
+        /* 하단 정보 */
+        .footer { position: absolute; bottom: 30px; font-size: 0.9rem; color: #6c757d; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>S&H Global Trading Corp.</h1>
-        <p><strong>Strategic Market Positioning & Global Trade Expert</strong></p>
-        <p>Expert in consumer product import services and market analysis since 2014.</p>
-        <div class="nda-box">
-            "Strictly Private. Due to NDA, we do not operate a public official website."
+    <div class="hero">
+        <div class="container">
+            <h1>S&H Global Trading Corp.</h1>
+            <p class="subtitle">Strategic Market Positioning & Global Trade Expert</p>
+            
+            <p class="description">
+                <strong>[Business Expertise]</strong><br>
+                Since 2014, we have provided comprehensive import services and 
+                strategic market analysis specialized for consumer products.
+            </p>
+
+            <div class="nda-notice">
+                Strictly Private Operation Under Non-Disclosure Agreement (NDA)
+            </div>
         </div>
-        <div class="address">
-            13740 N Highway 183 STE K1, AUSTIN, TX 78750<br>
-            CEO: Joohee Han
+
+        <div class="footer">
+            13740 N Highway 183 STE K1, AUSTIN, TX 78750 | CEO: Joohee Han
         </div>
     </div>
 </body>
