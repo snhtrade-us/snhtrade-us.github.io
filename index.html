@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S&H Global Trading Corp. | Official</title>
+    <title>S&H Global Trading Corp. | Strategic Trade Expert</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -12,249 +12,111 @@
         section { 
             height: 100vh; width: 100%; display: flex; flex-direction: column; 
             justify-content: center; align-items: center; scroll-snap-align: start; 
-            position: relative; text-align: center; padding: 40px;
+            position: relative; text-align: center; padding: 40px; background-size: cover; background-position: center;
         }
-        .bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; object-fit: cover; filter: brightness(0.85); }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: rgba(255, 255, 255, 0.4); }
+        /* 1. 주인님의 실제 영상 파일명 반영: sh_trade_video.mp4 */
+        .bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; object-fit: cover; filter: brightness(0.8); }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: rgba(255, 255, 255, 0.45); }
+        
+        /* 2. 주인님이 주신 이미지 파일명 소문자 매칭 */
+        .bg-kitchen { background-image: url('kitchen.jpg'); }
+        .bg-beauty { background-image: url('beauty.jpg'); }
+        .bg-electronics { background-image: url('electronics.jpg'); }
+        .bg-lifestyle { background-image: url('lifestyle.jpg'); }
+
         .content-box { 
-            background: rgba(255, 255, 255, 0.97); padding: 50px; max-width: 1050px; width: 90%;
-            border-top: 15px solid #002D62; box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            background: rgba(255, 255, 255, 0.98); padding: 50px; max-width: 1100px; width: 95%;
+            border-top: 15px solid #002D62; box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+            text-align: left;
         }
-        h1 { font-family: 'Playfair Display', serif; font-size: 3.8rem; color: #002D62; margin-bottom: 10px; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #002D62; margin-bottom: 20px; }
-        h3 { color: #777; text-transform: uppercase; letter-spacing: 5px; font-size: 0.9rem; margin-bottom: 25px; }
-        .desc { font-size: 1.15rem; line-height: 1.8; color: #333; text-align: left; margin-bottom: 20px; }
-        .list-box { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; }
-        .item { font-weight: 600; color: #002D62; display: flex; align-items: center; }
-        .item::before { content: "✔"; margin-right: 10px; }
-        .nda-badge { background: #d9534f; color: white; padding: 10px 20px; font-weight: 800; display: inline-block; margin-top: 25px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #002D62; margin-bottom: 15px; font-weight: 900; text-align: center; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.3rem; color: #002D62; margin-bottom: 25px; border-bottom: 2px solid #002D62; padding-bottom: 15px; }
+        h3 { color: #888; text-transform: uppercase; letter-spacing: 5px; font-size: 0.9rem; margin-bottom: 20px; }
+        .desc-text { font-size: 1.15rem; line-height: 1.9; color: #222; margin-bottom: 25px; }
+        .detail-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .detail-item { padding: 15px; border-left: 4px solid #d9534f; background: #f9f9f9; font-size: 1rem; color: #444; font-weight: 600; }
+        .nda-label { border: 5px double #d9534f; color: #d9534f; padding: 20px 40px; font-weight: 900; font-size: 1.5rem; display: block; text-align: center; margin-top: 30px; }
     </style>
 </head>
 <body>
 
     <video autoplay muted loop playsinline class="bg-video">
-        <source src="your-video.mp4" type="video/mp4">
+        <source src="sh_trade_video.mp4" type="video/mp4">
     </video>
     <div class="overlay"></div>
 
     <div class="scroll-container">
         <section>
-            <img src="S&H LOGO_AI-01.png" alt="S&H Logo" style="width: 400px; margin-bottom: 20px;">
+            <img src="S&H LOGO_AI-01.png" alt="S&H Logo" style="width: 420px; margin-bottom: 25px;">
             <h1>S&H Global Trading Corp.</h1>
-            <h3>Global Trade & Strategic Market Positioning</h3>
+            <h3>Strategic Market Positioning & Global Trade Expert</h3>
         </section>
 
         <section>
             <div class="content-box">
-                <h3>Section 1: Insight</h3>
-                <h2>Market Overview & Analysis</h2>
-                <p class="desc">S&H Global Trading Corp. monitors global trade flows and consumer shifts to navigate the complexities of international commerce. We provide the intelligence needed to succeed in a volatile economy.</p>
-                <div class="list-box">
-                    <div class="item">Global Trend Forecasting</div>
-                    <div class="item">Supply Chain Intelligence</div>
-                    <div class="item">Regulatory Compliance</div>
-                    <div class="item">Macro-Economic Research</div>
+                <h3>Section 1</h3>
+                <h2>Global Market Overview</h2>
+                <p class="desc-text">In a rapidly shifting global economy, success depends on interpreting macro-trade flows. S&H Global Trading Corp monitors international commerce trends to ensure stable growth and capitalizes on shifting consumer demands with precision.</p>
+                <div class="detail-list">
+                    <div class="detail-item">Trade Flow Monitoring</div>
+                    <div class="detail-item">Demand Forecasting</div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="content-box">
-                <h3>Section 1: Opportunity</h3>
-                <h2>Identifying Strategic Gaps</h2>
-                <p class="desc">We specialize in finding untapped niche markets. By connecting high-quality international manufacturers with North American demand, we unlock new revenue streams for our partners.</p>
-                <div class="list-box">
-                    <div class="item">Niche Market Expansion</div>
-                    <div class="item">Competitive Analysis</div>
-                    <div class="item">Value Creation</div>
-                    <div class="item">Market Entry Research</div>
-                </div>
-            </div>
-        </section>
+        <section><div class="content-box"><h3>Section 1</h3><h2>Strategic Opportunity</h2><p class="desc-text">We evaluate competitive landscapes to discover underserved categories where international brands can establish an early and dominant foothold. Our approach transforms market gaps into sustainable revenue.</p></div></section>
 
-        <section>
-            <div class="content-box">
-                <h3>Section 1: Operations</h3>
-                <h2>Trade Solutions & Mitigation</h2>
-                <p class="desc">Operational friction is the enemy of growth. S&H manages logistical bottlenecks and customs barriers to ensure your products move across borders without delay.</p>
-                <div class="list-box">
-                    <div class="item">Risk Management</div>
-                    <div class="item">Customs Brokerage</div>
-                    <div class="item">Freight Optimization</div>
-                    <div class="item">Inventory Continuity</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="content-box">
-                <h3>Section 2: Strategy</h3>
-                <h2>Market Positioning</h2>
-                <p class="desc">Entry is just the beginning. We define your brand’s 'Why' in the US market, ensuring it stands out as a premium choice among competitors.</p>
-                <div class="list-box">
-                    <div class="item">Brand Localization</div>
-                    <div class="item">Value Engineering</div>
-                    <div class="item">Tier-1 Retail Strategy</div>
-                    <div class="item">Consumer Trust Building</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="content-box">
-                <h3>Section 2: Intelligence</h3>
-                <h2>Target Consumer Profiling</h2>
-                <p class="desc">Our deep-dive research into demographic behavior ensures your products meet the exact expectations of American households.</p>
-                <div class="list-box">
-                    <div class="item">Behavioral Data Analysis</div>
-                    <div class="item">Demographic Mapping</div>
-                    <div class="item">Purchase Trigger Research</div>
-                    <div class="item">Market Fit Testing</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="content-box">
-                <h3>Section 2: Network</h3>
-                <h2>Distribution Infrastructure</h2>
-                <p class="desc">We bridge the gap between production and the shelf. Our network includes major retail chains and specialized E-commerce platforms.</p>
-                <div class="list-box">
-                    <div class="item">B2B Sales Network</div>
-                    <div class="item">E-commerce Integration</div>
-                    <div class="item">Omni-channel Reach</div>
-                    <div class="item">Logistics Integration</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="content-box">
-                <h3>Section 2: Leadership</h3>
-                <h2>S&H Core Advantages</h2>
-                <p class="desc">Why S&H? We possess the proprietary network and localized expertise that traditional trading firms lack.</p>
-                <div class="list-box">
-                    <div class="item">2014 Established Reliability</div>
-                    <div class="item">Data-Driven Agility</div>
-                    <div class="item">Exclusive Partnerships</div>
-                    <div class="item">Localized US Operation</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
+        <section class="bg-kitchen">
             <div class="content-box">
                 <h3>Expertise</h3>
-                <h2>Kitchen & Houseware</h2>
-                <p class="desc">Analyzing material durability and ergonomic trends to import the highest quality household tools for the modern kitchen.</p>
-                <div class="list-box">
-                    <div class="item">FDA Compliance Check</div>
-                    <div class="item">Durability Assessment</div>
-                    <div class="item">Modern Design Sourcing</div>
-                    <div class="item">Supplier Quality Control</div>
-                </div>
+                <h2>Kitchen & Houseware Specialty</h2>
+                <p class="desc-text">Meticulously analyzing material durability, ergonomic trends, and FDA safety standards. We identify innovations that blend functionality with aesthetic appeal for the global home.</p>
             </div>
         </section>
 
-        <section>
+        <section class="bg-beauty">
             <div class="content-box">
                 <h3>Expertise</h3>
                 <h2>Beauty & Personal Care</h2>
-                <p class="desc">Strategically localizing premium beauty brands for the US market, focusing on ingredient safety and trend-driven demand.</p>
-                <div class="list-box">
-                    <div class="item">Ingredient Verification</div>
-                    <div class="item">Packaging Localization</div>
-                    <div class="item">K-Beauty Adaptation</div>
-                    <div class="item">Brand Storytelling</div>
-                </div>
+                <p class="desc-text">Strategically localizing premium beauty brands for the US market. Focusing on ingredient safety and K-Beauty adaptation to meet sophisticated consumer demands.</p>
             </div>
         </section>
 
-        <section>
+        <section class="bg-electronics">
             <div class="content-box">
                 <h3>Expertise</h3>
                 <h2>Home Electronics</h2>
-                <p class="desc">Evaluating technical standards and consumer gadget trends to bring innovative electronics to your home.</p>
-                <div class="list-box">
-                    <div class="item">Tech Compliance (UL/FCC)</div>
-                    <div class="item">User Experience Analysis</div>
-                    <div class="item">Smart Home Integration</div>
-                    <div class="item">Innovation Scouting</div>
-                </div>
+                <p class="desc-text">Identifying smart home technology waves. Evaluating technical compliance (UL/FCC) and consumer tech trends to import cutting-edge electronics safely.</p>
             </div>
         </section>
 
-        <section>
+        <section class="bg-lifestyle">
             <div class="content-box">
                 <h3>Expertise</h3>
                 <h2>Lifestyle & Seasonal Goods</h2>
-                <p class="desc">Capturing seasonal trends with agile sourcing and inventory management for the evolving consumer lifestyle.</p>
-                <div class="list-box">
-                    <div class="item">Peak Season Forecasting</div>
-                    <div class="item">Trend-Driven Selection</div>
-                    <div class="item">Rapid Supply Chain</div>
-                    <div class="item">Lifestyle Branding</div>
-                </div>
+                <p class="desc-text">Agile sourcing for seasonal trends and peak demand periods. Managing the entire lifecycle of lifestyle goods for timely market entry.</p>
             </div>
         </section>
 
-        <section>
-            <div class="content-box">
-                <h3>Section 3: Foundation</h3>
-                <h2>Company Establishment</h2>
-                <p class="desc">S&H Global Trading Corp. has been a pillar of strategic trade since 2014, operating out of Austin, Texas.</p>
-                <div class="list-box">
-                    <div class="item">Founded in 2014</div>
-                    <div class="item">Austin, Texas HQ</div>
-                    <div class="item">Strategic Sales Focus</div>
-                    <div class="item">Global Trade Reach</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="content-box">
-                <h3>Section 3: Future</h3>
-                <h2>Core Assets & Vision</h2>
-                <p class="desc">Our vision is to be the premier bridge for international brands seeking dominance in the North American market.</p>
-                <div class="list-box">
-                    <div class="item">Proprietary Network</div>
-                    <div class="item">Strategic Analysis Assets</div>
-                    <div class="item">Expansion Readiness</div>
-                    <div class="item">Global Trust Building</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="content-box">
-                <h3>Section 3: Capability</h3>
-                <h2>Customs & Logistics Infrastructure</h2>
-                <p class="desc">Our robust infrastructure ensures that customs clearance and logistics never hinder business growth.</p>
-                <div class="list-box">
-                    <div class="item">Rapid Customs Clearance</div>
-                    <div class="item">Secure Warehousing</div>
-                    <div class="item">Real-time Tracking</div>
-                    <div class="item">Efficient Distribution</div>
-                </div>
-            </div>
-        </section>
+        <section><div class="content-box"><h3>Section 3</h3><h2>Company Infrastructure</h2><p class="desc-text">Founded in 2014 in Austin, Texas. Our foundation is built on reliability and global vision, handling high-volume trade with frictionless customs brokerage.</p></div></section>
 
         <section>
             <div class="content-box">
                 <h3>Trust</h3>
                 <h2>Strict Private Operation</h2>
-                <p class="desc">We protect your business intelligence with the highest level of legal and operational confidentiality.</p>
-                <div class="nda-badge">STRICTLY PRIVATE OPERATION UNDER NDA</div>
+                <p class="desc-text">All business intelligence and strategic initiatives are protected under a rigorous Non-Disclosure Agreement (NDA), ensuring proprietary information remains exclusive.</p>
+                <div class="nda-label">STRICTLY PRIVATE OPERATION - NDA PROTECTED</div>
             </div>
         </section>
 
         <section>
-            <div class="content-box" style="border-top-color: #d9534f;">
+            <div class="content-box" style="border-top-color: #d9534f; text-align: center;">
                 <h2>Contact Information</h2>
-                <p class="desc"><strong>Headquarters:</strong> 13740 N Highway 183 STE K1, AUSTIN, TX 78750<br>
-                <strong>CEO:</strong> JU HEE HAN (Jeffrey HAN)</p>
-                <p style="font-size: 0.9rem; color: #888; margin-top: 40px;">Establishing success in the global market since 2014.</p>
+                <p class="desc-text" style="text-align:center;">
+                    <strong>Headquarters:</strong> 13740 N Highway 183 STE K1, AUSTIN, TX 78750<br><br>
+                    <strong>CEO:</strong> JU HEE HAN (Jeffrey HAN)
+                </p>
+                <p style="font-size: 0.9rem; color: #888; margin-top: 40px;">Establishing Global Success Since 2014.</p>
             </div>
         </section>
     </div>
