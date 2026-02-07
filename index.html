@@ -4,96 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S&H Global Trading Corp.</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Arial, sans-serif; overflow: hidden; }
-        
-        /* 배경 영상: 밝고 선명한 대낮 물류 영상 */
-        .v-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1; overflow: hidden;
-        }
-        video {
-            min-width: 100%; min-height: 100%; width: auto; height: auto;
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            filter: brightness(1.05) contrast(1.1); /* 더 밝고 선명하게 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100%; font-family: 'Montserrat', sans-serif; overflow: hidden; background: #fff; }
+        .scroll-container { height: 100vh; overflow-y: scroll; scroll-snap-type: y mandatory; }
+        section { 
+            height: 100vh; width: 100%; display: flex; flex-direction: column; 
+            justify-content: center; align-items: center; scroll-snap-align: start; 
+            position: relative; text-align: center; padding: 40px;
         }
 
-        /* 화사한 오버레이 */
-        .overlay {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(255, 255, 255, 0.3); /* 영상 위에 아주 투명한 흰색 막 */
-        }
+        /* 배경 영상/이미지 설정 */
+        .bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; object-fit: cover; filter: brightness(0.8); }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: rgba(255, 255, 255, 0.4); }
 
-        .main-container {
-            position: relative; height: 100vh; display: flex; flex-direction: column;
-            justify-content: center; align-items: center; text-align: center;
+        /* 디자인 요소 */
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.9); padding: 50px; border-radius: 5px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1); max-width: 900px; border-top: 10px solid #002D62;
         }
-
-        /* 로고 자리 (이미지가 없으므로 아이콘과 텍스트로 임시 구현) */
-        .logo-area { margin-bottom: 20px; animation: fadeInDown 1s ease-out; }
-        .logo-placeholder { 
-            font-size: 3rem; color: #002D62; margin-bottom: 10px; 
-            display: block; font-weight: 900; 
-        }
-
-        h1 { 
-            font-size: 4.2rem; color: #002D62; margin: 0; font-weight: 800;
-            letter-spacing: -2px; animation: fadeInUp 1.2s ease-out;
-        }
-        .tagline { 
-            font-size: 1.4rem; color: #444; margin-top: 10px; font-weight: 400;
-            text-transform: uppercase; letter-spacing: 5px; animation: fadeInUp 1.2s 0.3s ease-out;
-        }
-
-        /* 세련된 정보 카드 */
-        .info-card {
-            margin-top: 50px; background: rgba(255, 255, 255, 0.9);
-            padding: 25px 60px; border-radius: 0; border-top: 5px solid #002D62;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            animation: fadeInUp 1.2s 0.6s ease-out;
-        }
-        .info-card p { font-size: 1.1rem; color: #333; margin: 0; line-height: 1.8; }
-
-        .nda-label {
-            margin-top: 30px; font-size: 0.85rem; color: #d9534f;
-            font-weight: 700; border: 1px solid #d9534f; padding: 5px 15px;
-            animation: fadeIn 2s 1s forwards; opacity: 0;
-        }
-
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeIn { to { opacity: 1; } }
-
-        .footer { position: absolute; bottom: 30px; color: #777; font-size: 0.9rem; }
+        .logo-img { width: 300px; margin-bottom: 20px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #002D62; margin-bottom: 10px; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #002D62; margin-bottom: 20px; }
+        h3 { color: #555; text-transform: uppercase; letter-spacing: 3px; font-size: 1rem; margin-bottom: 15px; }
+        p { font-size: 1.1rem; line-height: 1.8; color: #333; margin-bottom: 15px; text-align: justify; }
+        .nda-highlight { color: #d9534f; font-weight: bold; border: 2px solid #d9534f; padding: 10px; display: inline-block; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <div class="v-bg">
-        <video autoplay muted loop playsinline>
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-top-view-of-a-cargo-ship-sailing-in-the-sea-41521-large.mp4" type="video/mp4">
-        </video>
-        <div class="overlay"></div>
-    </div>
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="your-video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
 
-    <div class="main-container">
-        <div class="logo-area">
-            <i class="fa-solid fa-globe logo-placeholder"></i> </div>
-        
-        <h1>S&H Global Trading Corp.</h1>
-        <p class="tagline">Global Trade Expert</p>
+    <div class="scroll-container">
+        <section>
+            <img src="S&H LOGO_AI-01.png" alt="S&H Logo" class="logo-img">
+            <h1>S&H Global Trading Corp.</h1>
+            <h3>Strategic Market Positioning & Global Trade Expert</h3>
+        </section>
 
-        <div class="info-card">
-            <p><strong>Strategic Market Positioning & Comprehensive Import Services</strong><br>
-            Establishing reliable global partnerships since 2014.</p>
-        </div>
+        <section>
+            <div class="glass-card">
+                <h3>Slide 02 | Section 1</h3>
+                <h2>Market Overview</h2>
+                <p>Establishing a strong foothold in the global market requires precise timing and data-driven insights. S&H analyzes current global trade flows to identify untapped opportunities.</p>
+            </div>
+        </section>
 
-        <div class="nda-label">STRICTLY PRIVATE OPERATION UNDER NDA</div>
+        <section>
+            <div class="glass-card">
+                <h3>Slide 03 | Section 1</h3>
+                <h2>Strategic Opportunity</h2>
+                <p>We bridge the gap between global manufacturers and the US consumer market by leveraging macro-economic trends and localized demand analysis.</p>
+            </div>
+        </section>
 
-        <div class="footer">
-            13740 N Highway 183 STE K1, AUSTIN, TX 78750 | CEO: Joohee Han
-        </div>
+        <section>
+            <div class="glass-card">
+                <h3>Slide 04 | Section 1</h3>
+                <h2>Market Challenges & Solutions</h2>
+                <p>From complex customs regulations to logistical bottlenecks, S&H provides end-to-end solutions to ensure seamless market entry and operational stability.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 05 | Section 2</h3>
+                <h2>Strategic Market Positioning</h2>
+                <p>We define the most effective entry point for your products, ensuring high visibility and premium brand value in a competitive landscape.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 06 | Section 2</h3>
+                <h2>Target Consumer Analysis</h2>
+                <p>Deep-dive into demographic shifts and purchasing behaviors to align product features with the specific needs of North American consumers.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 07 | Section 2</h3>
+                <h2>Distribution Channel Strategy</h2>
+                <p>Optimizing supply chains across B2B and E-commerce platforms to maximize reach and minimize operational costs.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 08 | Section 2</h3>
+                <h2>Competitive Advantage</h2>
+                <p>Utilizing proprietary market intelligence to stay ahead of competitors and secure sustainable market share.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 09 | Expertise</h3>
+                <h2>Kitchen & Houseware</h2>
+                <p>Specialized sourcing and quality control for premium kitchen tools and household essentials tailored for modern living.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 10 | Expertise</h3>
+                <h2>Beauty & Personal Care</h2>
+                <p>Strategic localization of beauty products, focusing on ingredient safety, trend alignment, and brand storytelling.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 11 | Expertise</h3>
+                <h2>Home Electronics</h2>
+                <p>Evaluating technical compliance and consumer tech trends to introduce innovative gadgets to the global market.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 12 | Expertise</h3>
+                <h2>Lifestyle & Seasonal Goods</h2>
+                <p>Agile sourcing strategies to meet seasonal demands and evolving lifestyle trends with high-quality consumer goods.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 13 | Section 3</h3>
+                <h2>Company Establishment</h2>
+                <p>Founded in 2014, S&H Global Trading Corp. has consistently delivered excellence in global trade and sales analysis.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 14 | Section 3</h3>
+                <h2>Core Assets & Vision</h2>
+                <p>Our greatest asset is our global partnership network and our vision to become the premier gateway for international trade.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 15 | Section 3</h3>
+                <h2>Customs & Logistics</h2>
+                <p>Comprehensive customs clearance expertise and a robust logistics infrastructure ensure rapid and secure delivery of goods.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 16 | Section 3</h3>
+                <h2>Partnership & NDA</h2>
+                <p class="nda-highlight">"STRICTLY PRIVATE OPERATION UNDER NDA"</p>
+                <p>All business intelligence and partner data are protected under our rigorous Non-Disclosure Agreement policies.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-card">
+                <h3>Slide 17 | Section 3</h3>
+                <h2>Contact & Headquarters</h2>
+                <p><strong>HQ:</strong> 13740 N Highway 183 STE K1, AUSTIN, TX 78750</p>
+                <p><strong>CEO:</strong> Joohee Han (Jeffrey Han)</p>
+                <p style="margin-top:20px; font-size:0.9rem;">Building Global Trust Since 2014.</p>
+            </div>
+        </section>
     </div>
 
 </body>
